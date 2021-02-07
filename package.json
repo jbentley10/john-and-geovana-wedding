@@ -8,8 +8,11 @@
     "start": "next start"
   },
   "dependencies": {
+    "@apollo/client": "^3.3.8",
+    "@contentful/rich-text-types": "^14.1.2",
     "next": "10.0.5",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "react-spring": "^8.0.27"
   }
 }

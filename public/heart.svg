@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="48" height="48" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Symbol_97" data-name="Symbol 97" clip-path="url(#clip-path)">
+    <path id="Heart" d="M43.894,3.836a12.811,12.811,0,0,0-18.235,0L23.865,5.63,22.072,3.836A12.894,12.894,0,1,0,3.836,22.072L23.865,42.1,43.894,22.072a12.811,12.811,0,0,0,0-18.235" transform="translate(-0.025 2.954)" fill="#c01440" fill-rule="evenodd"/>
+    <rect id="Rectangle_1450" data-name="Rectangle 1450" width="48" height="48" transform="translate(0 0)" fill="none"/>
+  </g>
+</svg>

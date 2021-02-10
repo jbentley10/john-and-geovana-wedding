@@ -19,6 +19,7 @@ module.exports = {
         'link-color': '#7C177B'
       },
       fontSize: {
+        'huge-desktop': '7rem',
         'huge': '5rem',
         'h1': '2.75rem', // H1 
         'h2': '2.25rem', // H2

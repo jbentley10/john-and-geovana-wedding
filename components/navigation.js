@@ -5,12 +5,14 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { slide as Menu } from 'react-burger-menu'
+import { slide as Menu } from 'react-burger-menu';
+
+// Import styling 
+import { navigationLinkStyles } from '../utils/constants';
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen ] = useState(false)
   const menuClass = isMenuOpen ? "menu-open" : "menu-closed"
-
 
   const handleOnMenuStateChange = (menuState) => {
     setIsMenuOpen(menuState.isOpen)
@@ -20,18 +22,18 @@ export default function Navigation() {
     <div className={`flex justify-between`}>
       <div className={``}>
         <Link to={`/`} href={`/`}>
-          <h3 className={`font-john-mayer text-h3 text-uppercase`}>G & B</h3>
+          <h3 className={`font-john-mayer text-h3 text-uppercase text-text-color`}>G&J</h3>
         </Link>
       </div>
 
       {/* Mobile Navigation */}
-      <div className={``}>
+      <div className={`flex-initial md:hidden`}>
         <Menu
           right
           noOverlay        
           onStateChange={handleOnMenuStateChange}
           isOpen={ isMenuOpen }
-          className={ menuClass + `flex-initial md:hidden` }
+          className={ menuClass }
           htmlClassName=""
           bodyClassName=""
           burgerButtonClassName={ "h-full md:hidden" }
@@ -49,6 +51,12 @@ export default function Navigation() {
             <li className={``}><Link href="/"><a id="home" className="menu-item">Home</a></Link></li>
           </ul>
         </Menu>
+      </div>
+      {/* Desktop Navigation */}
+      <div className={`md:inline`}>
+        <ul>
+          <li className={navigationLinkStyles}><Link to={`/`} href={`/`}>Home</Link></li>
+        </ul>
       </div>
     </div>
   )

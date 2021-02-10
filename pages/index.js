@@ -3,6 +3,7 @@ import Head from 'next/head'
 // Import components
 import Hero from '../components/hero';
 import Navigation from '../components/navigation';
+import Footer from '../components/footer';
 
 // Import styles
 import { pageLayoutStyles } from '../utils/constants';
@@ -21,9 +22,7 @@ export default function Home() {
         header={`Geovana & John`}
         subheading={`are getting married!`}
       />
-
-      <footer className={``}>
-      </footer>
+      <Footer />
     </div>
   )
 }

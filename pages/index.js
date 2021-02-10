@@ -1,16 +1,26 @@
 import Head from 'next/head'
 
+// Import components
+import Hero from '../components/hero';
+import Navigation from '../components/navigation';
+
+// Import styles
+import { pageLayoutStyles } from '../utils/constants';
+
 export default function Home() {
   return (
-    <div className={``}>
+    <div className={`${pageLayoutStyles}`}>
       <Head>
-        <title>Create Next App</title>
+        <title>Home | John and Geovana's Wedding</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={``}>
-        <h1 className={`font-john-mayer text-huge`}>Hey there John</h1>
-      </main>
+      <Navigation />
+
+      <Hero 
+        header={`Geovana & John`}
+        subheading={`are getting married!`}
+      />
 
       <footer className={``}>
       </footer>

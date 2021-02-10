@@ -30,6 +30,9 @@ module.exports = {
         'footer': '1rem',
         '7xl': '4.5rem',
         '8xl': '6.25rem',
+      },
+      lineHeight: {
+        '13': '3.75rem'
       }
       // backgroundImage: theme => ({
       //   'wavy-background': "url('../public/backgrounds/wavy-bg.png')",

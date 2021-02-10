@@ -21,7 +21,7 @@ module.exports = {
       fontSize: {
         'huge-desktop': '7rem',
         'huge': '5rem',
-        'h1': '2.75rem', // H1 
+        'h1': '4rem', // H1 
         'h2': '2.25rem', // H2
         'h3': '1.75rem', // H3
         'h4': '1.5rem', // H4

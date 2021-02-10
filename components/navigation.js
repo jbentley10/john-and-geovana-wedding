@@ -48,12 +48,12 @@ export default function Navigation() {
           customCrossIcon={ <Image src="/menu-cross.svg" width={50} height={50} /> }
         >       
           <ul className={`block outline-none`}>
-            <li className={``}><Link href="/"><a id="home" className="menu-item">Home</a></Link></li>
+            <li><Link href="/"><a>Home</a></Link></li>
           </ul>
         </Menu>
       </div>
       {/* Desktop Navigation */}
-      <div className={`md:inline`}>
+      <div className={`hidden md:inline`}>
         <ul>
           <li className={navigationLinkStyles}><Link to={`/`} href={`/`}>Home</Link></li>
         </ul>

@@ -18,7 +18,7 @@ export default function Footer() {
         <p className={`${paragraphStyles} font-extralight pr-2`}>Made with </p>
         <Image src={`/heart.svg`} width={30} height={30} />
         <p className={`${paragraphStyles} font-extralight px-2`}>by </p>
-        <a className={`${linkStyles}`}><Link href={`https://www.jwbentley.com`}>John Bentley Creative</Link></a>
+        <Link href={`https://www.jwbentley.com`}><a className={`${linkStyles}`} target="_blank">John Bentley Creative</a></Link>
       </div>
     </div>
   )

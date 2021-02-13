@@ -4,8 +4,8 @@
 
 import { h1Styles, h2Styles } from "../utils/constants";
 
- export default function LeftRightText({ leftHeading, leftRichText, rightHeading, rightRichText}) {
-   return (
+export default function LeftRightText({ leftHeading, leftRichText, rightHeading, rightRichText}) {
+  return (
     <div className={`w-full p-0 xl:px-72`}>
       {/* Left Text */}  
       <div className={`text-left w-7/12 xl:w-3/12 pb-64`}>
@@ -13,10 +13,17 @@ import { h1Styles, h2Styles } from "../utils/constants";
         <h1 className={`${h1Styles}`}>{ leftRichText }</h1>
       </div>
       {/* Right Text */}  
-      <div className={`text-right w-full`}>
+      <div className={`text-right w-full pb-16 border-bottom--left`}>
         <h2 className={`${h2Styles} pb-12`}>{ rightHeading }</h2>
         <h2 className={`${h2Styles}`}>{ rightRichText }</h2>
       </div>
+      <style jsx={true}>{`
+        @media screen and (max-width: 767px) {
+          .border-bottom--left {
+            border-bottom: 4px solid #A20B5C;
+          }
+        }
+      `}</style>
     </div>
-   )
- }
+  )
+}

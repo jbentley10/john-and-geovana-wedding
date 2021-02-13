@@ -9,7 +9,8 @@ module.exports = {
     extend: {
       colors: {
         'nude-1': '#f9C586',   
-        'nude-2': '#EEA15F',
+        'nude-2': '#f3b671',
+        'nude-3': '#EEA15F',
         'red': '#C01440',
         'purple': '#A20B5C',
         'orange': '#BF452D',
@@ -34,10 +35,12 @@ module.exports = {
       },
       lineHeight: {
         '13': '3.75rem'
-      }
-      // backgroundImage: theme => ({
-      //   'wavy-background': "url('../public/backgrounds/wavy-bg.png')",
-      // })
+      },
+      backgroundImage: theme => ({
+        'line-left-bottom': "url('../public/backgrounds/line-left--bottom.png')",
+        'line-center': "url('../public/backgrounds/lines--center.png')",
+        'line-center-bottom': "url('../public/backgrounds/lines-center--bottom.png')",
+      })
     },
   },
   variants: {

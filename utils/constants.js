@@ -1,5 +1,5 @@
 // Containers
-export const pageLayoutStyles = 'p-10 md:py-8 md:px-32 bg-gradient-to-r from-nude-1 to-nude-2';
+export const pageLayoutStyles = 'p-10 md:py-8 md:px-32 bg-gradient-to-r from-nude-1 to-nude-3';
 
 // Text
 // Regular

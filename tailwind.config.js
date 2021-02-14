@@ -36,12 +36,10 @@ module.exports = {
       },
       lineHeight: {
         '13': '3.75rem'
-      },
-      backgroundImage: theme => ({
-        'line-left-bottom': "url('../public/backgrounds/line-left--bottom.png')",
-        'line-center': "url('../public/backgrounds/lines--center.png')",
-        'line-center-bottom': "url('../public/backgrounds/lines-center--bottom.png')",
-      })
+      }
+      // backgroundImage: theme => ({
+      //   'line-left-bottom': "url('../public/backgrounds/line-left--bottom.png')",
+      // })
     },
   },
   variants: {

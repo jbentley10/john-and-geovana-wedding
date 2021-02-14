@@ -22,6 +22,7 @@ export default function Home() {
           <title>Home | John and Geovana's Wedding</title>
           <link rel="icon" href="/favicon.ico" />
           <link rel="manifest" href="/manifest.json" />
+          <html lang={`en`} />
           <meta
             name="description"
             content={`John and Geovana are getting married! Come celebrate with us in Portland on 7-29-2022.`}

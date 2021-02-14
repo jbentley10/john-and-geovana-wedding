@@ -1,6 +1,5 @@
 // Import dependencies
 import Head from 'next/head';
-import Image from 'next/image';
 
 // Import components
 import Hero from '../components/hero';
@@ -9,6 +8,7 @@ import LeftRightText from '../components/left-right-text';
 import BorderLeft from '../components/border-left';
 import ImageBlock from '../components/image-block';
 import Schedule from '../components/schedule';
+import Map from '../components/map';
 import Footer from '../components/footer';
 
 // Import styles
@@ -42,9 +42,10 @@ export default function Home() {
 
       <ImageBlock />
 
-      <Schedule />
+      <Schedule />      
 
       <div className={`${pageLayoutStyles}`}>
+        <Map />
         <Footer />
       </div>
     </>

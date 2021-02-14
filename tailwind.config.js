@@ -9,8 +9,9 @@ module.exports = {
     extend: {
       colors: {
         'nude-1': '#f9C586',   
-        'nude-2': '#f3b671',
-        'nude-3': '#EEA15F',
+        'nude-2': '#f2b06f',
+        'nude-3': '#efa765',
+        'nude-4': '#EEA15F',
         'red': '#C01440',
         'purple': '#A20B5C',
         'orange': '#BF452D',

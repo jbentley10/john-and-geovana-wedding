@@ -11,26 +11,26 @@
 }
 @font-face {
   font-family: "Jost";
-  src: url("/fonts/Jost/Jost-Light.ttf");
+  src: url("/fonts/Jost/Jost-Thin.ttf");
   font-style: normal;
   font-weight: 200;
 }
 @font-face {
   font-family: "Jost";
-  src: url("/fonts/Jost/Jost-Regular.ttf");
+  src: url("/fonts/Jost/Jost-Light.ttf");
   font-style: normal;
   font-weight: 300;
 }
 @font-face {
   font-family: "Jost";
-  src: url("/fonts/Jost/Jost-Medium.ttf");
+  src: url("/fonts/Jost/Jost-Regular.ttf");
   font-style: normal;
   font-weight: 400;
 }
 
 @font-face {
   font-family: "Jost";
-  src: url("/fonts/Jost/Jost-Bold.ttf");
+  src: url("/fonts/Jost/Jost-SemiBold.ttf");
   font-style: normal;
   font-weight: 500;
 }

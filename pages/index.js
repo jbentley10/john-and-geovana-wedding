@@ -7,6 +7,8 @@ import Hero from '../components/hero';
 import Navigation from '../components/navigation';
 import LeftRightText from '../components/left-right-text';
 import BorderLeft from '../components/border-left';
+import ImageBlock from '../components/image-block';
+import Schedule from '../components/schedule';
 import Footer from '../components/footer';
 
 // Import styles
@@ -37,7 +39,11 @@ export default function Home() {
       </div>
 
       <BorderLeft />
-      
+
+      <ImageBlock />
+
+      <Schedule />
+
       <div className={`${pageLayoutStyles}`}>
         <Footer />
       </div>

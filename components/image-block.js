@@ -22,6 +22,7 @@ import { gradientBG } from '../utils/constants';
             layout={`intrinsic`}
             height={300}
             width={275}
+            alt={`John and Geovana when they got engaged New Year's Day, 2021.`}
           />
         </div>
       </div>

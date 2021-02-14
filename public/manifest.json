@@ -1,0 +1,9 @@
+{
+  "name": "John and Geovana's Wedding",
+  "short_name": "Geovana & John",
+  "description": "John and Geovana are getting married! Join us in the celebration.",
+  "start_url": "www.johnandgeovana.com",
+  "background_color": "#C01440",
+  "theme_color": "#f9C586",
+  "display": "browser"
+}

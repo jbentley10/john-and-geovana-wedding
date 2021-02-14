@@ -7,7 +7,7 @@ import { heroStyles, h2Styles } from '../utils/constants';
 export default function Hero ({ header, subheading }) {
   return (
     <div className={`h-screen`}>
-      <div className={`text-center py-48 md:pt-64`}>
+      <div className={`text-center pt-32 pb-48 md:pt-64`}>
         <h1 className={`${heroStyles}`}>{header}</h1>
         <h2 className={`${h2Styles}`}>{subheading}</h2>
       </div>

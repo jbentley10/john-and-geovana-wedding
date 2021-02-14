@@ -28,6 +28,7 @@ export default function Home() {
             content={`John and Geovana are getting married! Come celebrate with us in Portland on 7-29-2022.`}
           />
           <meta name="theme-color" content="#f9C586" />
+          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         </Head>
 
         <Navigation />

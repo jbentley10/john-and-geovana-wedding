@@ -22,7 +22,7 @@ export default function Navigation() {
     <div className={`flex justify-between`}>
       <div className={``}>
         <Link to={`/`} href={`/`}>
-          <h3 className={`font-john-mayer text-h3 text-uppercase text-text-color`}>G&J</h3>
+          <h3 className={`font-john-mayer text-h3 text-uppercase text-text-color cursor-pointer`}>G&J</h3>
         </Link>
       </div>
 

@@ -52,7 +52,7 @@ export default function Schedule() {
         <div className={`w-8/12 bg-gradient-to-r from-nude-1 to-nude-2`} />
         
         <div className={`w-2/12 bg-gradient-to-r from-nude-2 to-nude-3 border-right`}>
-          <div className={`pt-32 -ml-96`}>
+          <div className={`py-32 -ml-96`}>
             <h2 className={`${h2Styles}`}>Schedule</h2>
 
             <div className={`pt-16 pl-12`}>
@@ -73,11 +73,12 @@ export default function Schedule() {
 
         <div className={`w-2/12 bg-gradient-to-r from-nude-3 to-nude-4`} />
         
-        <div className={`hidden md:flex`}>
-          <div className={`w-7/12 bg-gradient-to-r from-nude-1 to-nude-2`} />
-          <div className={`w-3/12 border-bottom--right`} />
-          <div className={`w-2/12 bg-gradient-to-r from-nude-3 to-nude-4`} />
-        </div>
+      </div>
+
+      <div className={`hidden md:flex`}>
+        <div className={`w-7/12 bg-gradient-to-r from-nude-1 to-nude-2`} />
+        <div className={`w-3/12 border-bottom--right`} />
+        <div className={`w-2/12 bg-gradient-to-r from-nude-3 to-nude-4`} />
       </div>
 
       <style jsx={true}>{`

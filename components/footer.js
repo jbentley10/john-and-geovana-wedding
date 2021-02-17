@@ -8,11 +8,11 @@ import Link from 'next/link';
 // Import styling
 import { heroStyles, paragraphStyles, linkStyles } from "../utils/constants";
 
-export default function Footer() {
+export default function Footer({ mainText }) {
   return (
     <div className={`text-center py-24`}>
       <h1 className={`${heroStyles} pb-16`}>
-        See you there!
+        { mainText }
       </h1>
       <div className={`flex justify-center`}>
         <p className={`${paragraphStyles} font-extralight pr-2`}>Made with </p>

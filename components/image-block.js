@@ -18,7 +18,7 @@ import { gradientBG } from '../utils/constants';
         <div className={`w-5/12`} />
         <div className={`w-7/12 z-20`}>
           <Image 
-            src={`/images/geo-john.avif`}
+            src={`/images/geo-john.webp`}
             layout={`intrinsic`}
             height={300}
             width={275}

@@ -4,15 +4,20 @@
 
 // Import dependencies
 import Head from 'next/head';
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 
 // Import components
 import Hero from '../components/hero';
 import Navigation from '../components/navigation';
+import Footer from '../components/footer';
 
 // Import styles
-import { pageLayoutStyles } from '../utils/constants';
+import { htmlRenderingOptions, pageLayoutStyles } from '../utils/constants';
 
-export default function Groomsmen() {
+// Import functions
+import { fetchGroomsmenPageContent, fetchFooter } from '../utils/contentfulPages';
+
+export default function Groomsmen({ pageContent, footerContent }) {
   return (
     <>
       <div className={`${pageLayoutStyles}`}>
@@ -34,7 +39,27 @@ export default function Groomsmen() {
           header={`Groomsmen`}
           subheading={``}
         />
+
+        <div>
+          <div dangerouslySetInnerHTML={{ __html: documentToHtmlString(pageContent.fields.richText, htmlRenderingOptions) }} />
+        </div>
+
+        <Footer mainText={footerContent.fields.mainText} />
       </div>
     </>
   )
+}
+
+export async function getStaticProps({ preview = false }) {
+  const pageContent = await fetchGroomsmenPageContent();
+  const footerContent = await fetchFooter();
+
+  if (pageContent.fields && footerContent.fields) {
+    return {
+      props: {
+        pageContent,
+        footerContent
+      },
+    };
+  } else return;
 }

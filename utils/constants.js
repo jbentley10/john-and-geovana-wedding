@@ -37,6 +37,6 @@ export const htmlRenderingOptions = {
     [BLOCKS.UL_LIST]: (node, next) => `<br/> <ul>${next(node.content)}</ul>`,
     [BLOCKS.LIST_ITEM]: (node, next) => `<li>${next(node.content)}</li>`,
     [BLOCKS.EMBEDDED_ASSET]: (node, next) => `<img src={${next(node.content)}} />`,
-    [INLINES.HYPERLINK]: (node, next) => `<br/> <div class="text-center py-3 px-3 cursor-pointer transition duration-200 bg-yellow hover:bg-yellow-darkened mb-4"><h5 class="text-h5 font-barlow uppercase text-white">${next(node.content)}</h5></div>`
+    [INLINES.HYPERLINK]: (node, next) => `<br/> <a class="font-jost text-purple text-paragraph font-semibold cursor-pointer hover:text-link-color">${next(node.content)}</a></div>`
   }
 }

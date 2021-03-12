@@ -10,18 +10,19 @@ class MyDocument extends Document {
     return (
       <Html lang={this.props.lang || "en"}>
         <Head>
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `[
-                <!-- Google Tag Manager (noscript) -->
-                <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9ZGKXX"
-                height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-                <!-- End Google Tag Manager (noscript) -->
-              ]`
-            }}
-          />
+          
         </Head>
         <body>
+          <script
+              dangerouslySetInnerHTML={{
+                __html: `[
+                  <!-- Google Tag Manager (noscript) -->
+                  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9ZGKXX"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+                  <!-- End Google Tag Manager (noscript) -->
+                ]`
+              }}
+            />
           <Main />
           <NextScript />
         </body>

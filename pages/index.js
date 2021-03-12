@@ -32,10 +32,22 @@ export default function Home({ heroContent, leftRightTextContent, footerContent 
           />
           <meta name="theme-color" content="#f9C586" />
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+          {/* Google Tag Manager */}
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `[
+                <!-- Google Tag Manager (noscript) -->
+                <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9ZGKXX"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+                <!-- End Google Tag Manager (noscript) -->
+              ]`
+            }}
+          />
+          {/* End Google Tag Manager */}
         </Head>
 
         <Navigation />
-
+        
         <Hero 
           header={heroContent.fields.mainHeading}
           subheading={heroContent.fields.subtext}

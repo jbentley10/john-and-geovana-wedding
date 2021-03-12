@@ -14,15 +14,15 @@ class MyDocument extends Document {
         </Head>
         <body>
           <script
-              dangerouslySetInnerHTML={{
-                __html: `[
-                  <!-- Google Tag Manager (noscript) -->
-                  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9ZGKXX"
-                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-                  <!-- End Google Tag Manager (noscript) -->
-                ]`
-              }}
-            />
+            dangerouslySetInnerHTML={{
+              __html: `[
+                <!-- Google Tag Manager (noscript) -->
+                <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9ZGKXX"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+                <!-- End Google Tag Manager (noscript) -->
+              ]`
+            }}
+          />
           <Main />
           <NextScript />
         </body>

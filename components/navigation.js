@@ -27,7 +27,7 @@ export default function Navigation() {
       </div>
 
       {/* Mobile Navigation */}
-      <div className={`flex-initial md:hidden`}>
+      {/* <div className={`flex-initial md:hidden`}>
         <Menu
           right
           noOverlay        
@@ -51,12 +51,12 @@ export default function Navigation() {
             <li><Link href="/"><a>Home</a></Link></li>
           </ul>
         </Menu>
-      </div>
+      </div> */}
       {/* Desktop Navigation */}
       <div className={`hidden md:inline`}>
-        <ul>
+        {/* <ul>
           <li className={navigationLinkStyles}><Link to={`/`} href={`/`}>Home</Link></li>
-        </ul>
+        </ul> */}
       </div>
     </div>
   )

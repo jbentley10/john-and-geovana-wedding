@@ -53,7 +53,7 @@ export default function Map() {
         <div className={`w-full md:w-6/12 z-20`}>
           <div style={{ height: "50vh", width: "100%" }}>
             <MyMapComponent
-              googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmO1McaQgHA3FLjboz6l2UYqOyYTeAtfo&libraries=geometry,drawing,places"
+              googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_MAPS_API}&libraries=geometry,drawing,places`}
               loadingElement={<div style={{ height: `100%` }} />}
               containerElement={<div style={{ height: `400px` }} />}
               mapElement={<div style={{ height: `100%` }} />}

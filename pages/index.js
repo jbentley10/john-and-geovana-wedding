@@ -1,5 +1,7 @@
 // Import dependencies
+import { useEffect } from 'react';
 import Head from 'next/head';
+import TagManager from 'react-gtm-module';
 
 // Import components
 import Hero from '../components/hero';
@@ -15,6 +17,10 @@ import Footer from '../components/footer';
 import { pageLayoutStyles } from '../utils/constants';
 
 export default function Home() {
+  useEffect(() => {
+    TagManager.initialize({ gtmId: 'GTM-M9ZGKXX' });
+  }, []);
+
   return (
     <>
       <div className={`${pageLayoutStyles}`}>

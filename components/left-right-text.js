@@ -18,14 +18,14 @@ export default function LeftRightText() {
           </h2>
           <h5 className={`${h5Styles}`}>Important Details:</h5>
           <p className={`${paragraphStyles} pb-6`}>
-            Although we love your little ones, this is an adults only affair for
+            Although we love your little ones, this is an adults-only affair for
             those 21 and over. We thank you for your understanding.
           </p>
           <p className={`${paragraphStyles}`}>
             Health & Safety: We are requiring all guests and vendors who are
-            attending our wedding to be fully vaccinated before attending the
-            wedding. If vaccination is not possible, we’d love for you to attend
-            our wedding, but unfortunately we can’t budge on this.
+            attending our wedding to be fully vaccinated. If vaccination is not
+            possible, while we’d love for you to join in on the festivities, we
+            unfortunately cannot budge on this.
           </p>
         </div>
       </div>

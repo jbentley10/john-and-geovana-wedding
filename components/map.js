@@ -26,7 +26,7 @@ export default function Map() {
   );
 
   return (
-    <>
+    <div id="location">
       <div className={`flex h-48`}>
         <div className={`border-center w-8/12`} />
         <div className={`w-5/12`} />
@@ -73,6 +73,6 @@ export default function Map() {
           }
         }
       `}</style>
-    </>
+    </div>
   );
 }

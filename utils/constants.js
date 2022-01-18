@@ -21,7 +21,7 @@ export const h5Styles = 'font-john-mayer text-h5 text-text-color leading-10';
 export const paragraphStyles = 'font-jost text-paragraph text-text-color leading-normal';
 // Links
 export const linkStyles = 'font-jost text-purple text-paragraph font-semibold cursor-pointer hover:text-link-color';
-export const navigationLinkStyles = 'font-jost text-text-color text-paragraph';
+export const navigationLinkStyles = 'font-jost text-text-color text-paragraph inline px-4';
 
 // Borders
 export const borderStyles = 'border-solid border-4 border-purple-700';

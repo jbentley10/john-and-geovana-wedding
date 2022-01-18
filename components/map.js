@@ -19,7 +19,31 @@ export default function Map() {
         defaultZoom={11}
         defaultCenter={{ lat: 45.5201952, lng: -122.6728248 }}
       >
-        <Marker position={{ lat: 45.5365861, lng: -122.6916165 }} />
+        <Marker
+          position={{ lat: 45.5365861, lng: -122.6916165 }}
+          onLoad={(marker) => {
+            const customIcon = (opts) =>
+              Object.assign(
+                {
+                  path: "M12.75 0l-2.25 2.25 2.25 2.25-5.25 6h-5.25l4.125 4.125-6.375 8.452v0.923h0.923l8.452-6.375 4.125 4.125v-5.25l6-5.25 2.25 2.25 2.25-2.25-11.25-11.25zM10.5 12.75l-1.5-1.5 5.25-5.25 1.5 1.5-5.25 5.25z",
+                  fillColor: "#34495e",
+                  fillOpacity: 1,
+                  strokeColor: "#000",
+                  strokeWeight: 1,
+                  scale: 1,
+                },
+                opts
+              );
+
+            marker.setIcon(
+              customIcon({
+                fillColor: "green",
+                strokeColor: "white",
+              })
+            );
+            return markerLoadHandler(marker, place);
+          }}
+        />
         <Marker position={{ lat: 45.5897694, lng: -122.5972829 }} />
       </GoogleMap>
     ))

@@ -12,13 +12,15 @@ module.exports = {
         'nude-2': '#f2b06f',
         'nude-3': '#efa765',
         'nude-4': '#EEA15F',
+        'dark-brown': '#ca9157',
         'red': '#C01440',
         'purple': '#A20B5C',
         'orange': '#BF452D',
         'mud': '#CC6445',
         // Text
         'text-color': '#4D4D4D',
-        'link-color': '#7C177B'
+        'link-color': '#7C177B',
+        'white': '#ffffff'
       },
       fontSize: {
         'huge-desktop': '7rem',

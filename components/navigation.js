@@ -35,27 +35,48 @@ export default function Navigation() {
       <div className={`flex-initial md:hidden`}>
         <Menu
           right
-          noOverlay        
+          noOverlay
           onStateChange={handleOnMenuStateChange}
-          isOpen={ isMenuOpen }
-          className={ menuClass }
+          isOpen={isMenuOpen}
+          className={menuClass}
           htmlClassName=""
           bodyClassName=""
-          burgerButtonClassName={ "h-full md:hidden" }
-          burgerBarClassName={ `md:hidden` }
-          crossButtonClassName={ `md:hidden` }
-          crossClassName={ `` }
-          menuClassName={ `md:hidden` }
-          morphShapeClassName={ `` }
-          itemListClassName={ `` }
-          overlayClassName={ "" }
-          customBurgerIcon={ <Image src="/menu-burger.svg" width={50} height={50} /> }
-          customCrossIcon={ <Image src="/menu-cross.svg" width={50} height={50} /> }
-        >       
+          burgerButtonClassName={"h-full md:hidden"}
+          burgerBarClassName={`md:hidden`}
+          crossButtonClassName={`md:hidden`}
+          crossClassName={``}
+          menuClassName={`md:hidden`}
+          morphShapeClassName={``}
+          itemListClassName={``}
+          overlayClassName={""}
+          customBurgerIcon={
+            <Image src="/menu-burger.svg" width={50} height={50} />
+          }
+          customCrossIcon={
+            <Image src="/menu-cross.svg" width={50} height={50} />
+          }
+        >
           <ul className={`block outline-none`}>
-            <li className={navigationLinkStyles}><Link to={`/`} href={`/`}>Home</Link></li>
-          <li className={navigationLinkStyles}><Link to={`/`} href={`/#about`}>About</Link></li>
-          <li className={navigationLinkStyles}><Link to={`/`} href={`/#location`}>Location</Link></li>
+            <li className={navigationLinkStyles}>
+              <Link to={`/`} href={`/`}>
+                Home
+              </Link>
+            </li>
+            <li className={navigationLinkStyles}>
+              <Link to={`/`} href={`/#about`}>
+                About
+              </Link>
+            </li>
+            <li className={navigationLinkStyles}>
+              <Link to={`/`} href={`/#location`}>
+                Location
+              </Link>
+            </li>
+            <li className={navigationLinkStyles}>
+              <Link to={`/`} href={`/#rsvp`}>
+                RSVP
+              </Link>
+            </li>
           </ul>
         </Menu>
       </div>
@@ -75,6 +96,11 @@ export default function Navigation() {
           <li className={navigationLinkStyles}>
             <Link to={`/`} href={`/#location`}>
               Location
+            </Link>
+          </li>
+          <li className={navigationLinkStyles}>
+            <Link to={`/`} href={`/#rsvp`}>
+              RSVP
             </Link>
           </li>
         </ul>

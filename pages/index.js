@@ -12,6 +12,7 @@ import ImageBlock from '../components/image-block';
 import Schedule from '../components/schedule';
 import Map from '../components/map';
 import Footer from '../components/footer';
+import RSVPForm from "../components/rsvp-form";
 
 // Import styles
 import { pageLayoutStyles } from '../utils/constants';
@@ -52,6 +53,7 @@ export default function Home() {
 
       <div className={`${pageLayoutStyles}`}>
         <Map />
+        {/* <RSVPForm /> */}
         <Footer />
       </div>
     </>

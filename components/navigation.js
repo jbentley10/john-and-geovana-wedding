@@ -72,11 +72,11 @@ export default function Navigation() {
                 Location
               </Link>
             </li>
-            <li className={navigationLinkStyles}>
+            {/* <li className={navigationLinkStyles}>
               <Link to={`/`} href={`/#rsvp`}>
                 RSVP
               </Link>
-            </li>
+            </li> */}
           </ul>
         </Menu>
       </div>
@@ -98,11 +98,11 @@ export default function Navigation() {
               Location
             </Link>
           </li>
-          <li className={navigationLinkStyles}>
+          {/* <li className={navigationLinkStyles}>
             <Link to={`/`} href={`/#rsvp`}>
               RSVP
             </Link>
-          </li>
+          </li> */}
         </ul>
       </div>
     </div>

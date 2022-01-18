@@ -27,12 +27,12 @@ export default function Map() {
 
   return (
     <div id="location">
-      <div className={`flex h-48`}>
+      <div className={`flex h-12 md:h-48`}>
         <div className={`border-center w-8/12`} />
         <div className={`w-5/12`} />
       </div>
-      <div className={`flex h-full`}>
-        <div className={`w-6/12`}>
+      <div className={`inline md:flex h-full`}>
+        <div className={`w-full md:w-6/12`}>
           <h2 className={`${h2Styles}`}>Get to know PDX</h2>
           <ul>
             <li className="mb-8 list-disc text-purple">
@@ -50,7 +50,7 @@ export default function Map() {
             </li>
           </ul>
         </div>
-        <div className={`w-6/12 z-20`}>
+        <div className={`w-full md:w-6/12 z-20`}>
           <div style={{ height: "50vh", width: "100%" }}>
             <MyMapComponent
               googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmO1McaQgHA3FLjboz6l2UYqOyYTeAtfo&libraries=geometry,drawing,places"
@@ -61,7 +61,7 @@ export default function Map() {
           </div>
         </div>
       </div>
-      <div className={`flex h-64`}>
+      <div className={`flex md:h-64`}>
         <div className={`border-center w-7/12`} />
         <div className={`w-5/12`} />
       </div>

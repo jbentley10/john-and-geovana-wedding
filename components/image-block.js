@@ -10,7 +10,7 @@ import { gradientBG } from '../utils/constants';
  export default function ImageBlock() {
    return (
      <div className={`image-block`}>
-      <div className={`flex h-16 sm:h-64 ${gradientBG}`}>
+      <div className={`flex h-12 md:h-64 ${gradientBG}`}>
         <div className={`border-center w-7/12`} />
         <div className={`w-5/12`} />
       </div>

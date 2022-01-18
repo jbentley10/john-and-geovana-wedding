@@ -18,7 +18,7 @@ export default function LeftRightText() {
           </h2>
           <h5 className={`${h5Styles}`}>Important Details:</h5>
           <p className={`${paragraphStyles} pb-6`}>
-            Although we love your little ones, this is an adult only affair for
+            Although we love your little ones, this is an adults only affair for
             those 21 and over. We thank you for your understanding.
           </p>
           <p className={`${paragraphStyles}`}>

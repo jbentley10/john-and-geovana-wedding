@@ -14,10 +14,7 @@ import Footer from '../components/footer';
 // Import styles
 import { pageLayoutStyles } from '../utils/constants';
 
-// Import functions
-import { fetchHero, fetchLeftRightText, fetchFooter } from '../utils/contentfulPages';
-
-export default function Home({ heroContent, leftRightTextContent, footerContent }) {
+export default function Home() {
   return (
     <>
       <div className={`${pageLayoutStyles}`}>
@@ -36,17 +33,9 @@ export default function Home({ heroContent, leftRightTextContent, footerContent 
 
         <Navigation />
         
-        <Hero 
-          header={heroContent.fields.mainHeading}
-          subheading={heroContent.fields.subtext}
-        />
+        <Hero/>
 
-        <LeftRightText 
-          leftHeading={`When`}
-          leftRichText={leftRightTextContent.fields.leftText}
-          rightHeading={`The Invite`}
-          rightRichText={leftRightTextContent.fields.rightText}
-        />
+        <LeftRightText />
       </div>
 
       <BorderLeft />
@@ -56,25 +45,15 @@ export default function Home({ heroContent, leftRightTextContent, footerContent 
       {/* <Schedule /> */}
 
       <div className={`${pageLayoutStyles}`}>
-        {/* <Map /> */}
-        <Footer mainText={footerContent.fields.mainText} />
+        <Map />
+        <Footer />
       </div>
     </>
   )
 }
 
-export async function getStaticProps({ preview = false }) {
-  const heroContent = await fetchHero();
-  const leftRightTextContent = await fetchLeftRightText();
-  const footerContent = await fetchFooter();
-
-  if (heroContent.fields && leftRightTextContent.fields && footerContent.fields) {
-    return {
-      props: {
-        heroContent,
-        leftRightTextContent,
-        footerContent
-      },
-    };
-  } else return;
+export async function getStaticProps(context) {
+  return {
+    props: {}
+  }
 }

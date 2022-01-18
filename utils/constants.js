@@ -17,11 +17,14 @@ export const h1Styles = 'font-john-mayer text-h1 text-text-color leading-snug';
 export const h2Styles = 'font-john-mayer text-h2 text-text-color leading-13';
 export const h3Styles = 'font-john-mayer text-h3 text-text-color leading-13';
 export const h4Styles = 'font-john-mayer text-h4 text-text-color leading-13';
-export const h5Styles = 'font-john-mayer text-h5 text-text-color leading-13';
+export const h5Styles = 'font-john-mayer text-h5 text-text-color leading-10';
 export const paragraphStyles = 'font-jost text-paragraph text-text-color leading-normal';
 // Links
 export const linkStyles = 'font-jost text-purple text-paragraph font-semibold cursor-pointer hover:text-link-color';
 export const navigationLinkStyles = 'font-jost text-text-color text-paragraph';
+
+// Borders
+export const borderStyles = 'border-solid border-4 border-purple-700';
 
 export const htmlRenderingOptions = {
   renderMark: {
@@ -37,6 +40,6 @@ export const htmlRenderingOptions = {
     [BLOCKS.UL_LIST]: (node, next) => `<br/> <ul>${next(node.content)}</ul>`,
     [BLOCKS.LIST_ITEM]: (node, next) => `<li>${next(node.content)}</li>`,
     [BLOCKS.EMBEDDED_ASSET]: (node, next) => `<img src={${next(node.content)}} />`,
-    [INLINES.HYPERLINK]: (node, next) => `<br/> <a class="font-jost text-purple text-paragraph font-semibold cursor-pointer hover:text-link-color">${next(node.content)}</a></div>`
+    [INLINES.HYPERLINK]: (node, next) => `<br/> <a class="font-john-mayer text-h2 text-purple leading-13 cursor-pointer hover:text-link-color">${next(node.content)}</a></div>`
   }
 }

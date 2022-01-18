@@ -3,21 +3,21 @@
  */
 
 // Import dependencies
-import Head from 'next/head';
-import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
+import Head from "next/head";
 
 // Import components
-import Hero from '../components/hero';
-import Navigation from '../components/navigation';
-import Footer from '../components/footer';
+import Hero from "../components/hero";
+import Navigation from "../components/navigation";
+import Footer from "../components/footer";
 
 // Import styles
-import { htmlRenderingOptions, pageLayoutStyles } from '../utils/constants';
+import {
+  pageLayoutStyles,
+  h1Styles,
+  paragraphStyles,
+} from "../utils/constants";
 
-// Import functions
-import { fetchGroomsmenPageContent, fetchFooter } from '../utils/contentfulPages';
-
-export default function Groomsmen({ pageContent, footerContent }) {
+export default function Groomsmen() {
   return (
     <>
       <div className={`${pageLayoutStyles}`}>
@@ -35,31 +35,36 @@ export default function Groomsmen({ pageContent, footerContent }) {
 
         <Navigation />
 
-        <Hero 
-          header={`Groomsmen`}
-          subheading={``}
-        />
+        <Hero header={`Groomsmen`} subheading={``} />
 
         <div>
-          <div dangerouslySetInnerHTML={{ __html: documentToHtmlString(pageContent.fields.richText, htmlRenderingOptions) }} />
+          <h1 className={`${h1Styles}`}>Welcome, groomsmen!</h1>
+          <p className={`${paragraphStyles}`}>
+            We're so excited to have you as a part of our wedding party! To get
+            started, we've put together a Discord server specifically for us to
+            chat, post ideas, and just get to know each other better. If you
+            haven't used Discord before, it's essentially a chat platform for
+            friends where you can create different "Channels" to chat in. Think
+            of these as themed chat rooms - just like the good ol' AIM days.To
+            join the Discord server, visit this link:{" "}
+            <a className={`text-purple`} href="https://discord.gg/x9A3vQtb">
+              https://discord.gg/x9A3vQtb
+            </a>
+            .
+          </p>
+          <p className={`${paragraphStyles}`}>
+            More updates will be posted here soon!
+          </p>
         </div>
 
-        <Footer mainText={footerContent.fields.mainText} />
+        <Footer />
       </div>
     </>
-  )
+  );
 }
 
-export async function getStaticProps({ preview = false }) {
-  const pageContent = await fetchGroomsmenPageContent();
-  const footerContent = await fetchFooter();
-
-  if (pageContent.fields && footerContent.fields) {
-    return {
-      props: {
-        pageContent,
-        footerContent
-      },
-    };
-  } else return;
+export async function getStaticProps(context) {
+  return {
+    props: {},
+  };
 }

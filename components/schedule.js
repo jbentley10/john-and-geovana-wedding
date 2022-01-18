@@ -3,7 +3,7 @@
  */
 // Import styles
 import { useState } from 'react';
-import { h2Styles, linkStyles } from '../utils/constants';
+import { h2Styles, linkStyles, borderStyles } from '../utils/constants';
 
 export default function Schedule() {
   const [currentDay, setCurrentDay] = useState('Thu');
@@ -11,19 +11,21 @@ export default function Schedule() {
   // Schedule content for each day
   const ThursdayContent = () => {
     return (
-      <p>Thursday</p>
+      <p>The wedding party is invited to join us for our reception rehearsal, followed
+        by dinner.
+      </p>
     )
   }
 
   const FridayContent = () => {
     return (
-      <p>Friday</p>
+      <p>Wedding ceremony and reception!</p>
     )
   }
 
   const SaturdayContent = () => {
     return (
-      <p>Saturday</p>
+      <p>To be announced...</p>
     )
   }
 
@@ -57,9 +59,9 @@ export default function Schedule() {
 
             <div className={`pt-16 pl-12`}>
               <ul className={`flex`}>
-                <li className={`p-6`}><a className={`mr-32 ${linkStyles}`} onClick={() => handleSetDay('Thu')}>Thu</a></li>
-                <li className={`p-6`}><a className={`mr-32 ${linkStyles}`} onClick={() => handleSetDay('Fri')}>Fri</a></li>
-                <li className={`p-6`}><a className={`mr-32 ${linkStyles}`} onClick={() => handleSetDay('Sat')}>Sat</a></li>
+                <li className={`p-6`}><a className={`mr-32 p-5 ${linkStyles} ${currentDay == 'Thu' && borderStyles}`} onClick={() => handleSetDay('Thu')}>Thu</a></li>
+                <li className={`p-6`}><a className={`mr-32 p-5 ${linkStyles} ${currentDay == 'Fri' && borderStyles}`} onClick={() => handleSetDay('Fri')}>Fri</a></li>
+                <li className={`p-6`}><a className={`mr-32 p-5 ${linkStyles} ${currentDay == 'Sat' && borderStyles}`} onClick={() => handleSetDay('Sat')}>Sat</a></li>
               </ul>
 
               <div className={`schedule-content`}>

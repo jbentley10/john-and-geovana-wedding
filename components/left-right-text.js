@@ -4,26 +4,29 @@
 
 import { h1Styles, h2Styles } from "../utils/constants";
 
-export default function LeftRightText({ leftHeading, leftRichText, rightHeading, rightRichText}) {
+export default function LeftRightText() {
   return (
     <div className={`w-full p-0 xl:px-72`}>
-      {/* Left Text */}  
-      <div className={`text-left w-7/12 xl:w-3/12 pb-64`}>
-        <h2 className={`${h2Styles}`}>{ leftHeading }</h2>
-        <h1 className={`${h1Styles}`}>{ leftRichText }</h1>
-      </div>
-      {/* Right Text */}  
-      <div className={`text-right w-full pb-16 border-bottom--left`}>
-        <h2 className={`${h2Styles} pb-12`}>{ rightHeading }</h2>
-        <h2 className={`${h2Styles}`}>{ rightRichText }</h2>
+      {/* Left Text */}
+      <div className={`text-left w-full`}>
+        <div>
+          <h2
+            className={`font-john-mayer text-h2 text-text-color leading-13 pb-12`}
+          >
+            We hope you'll be there to celebrate with us in Portland, Oregon!
+          </h2>
+          <h2
+            className={`font-john-mayer text-h2 text-text-color leading-13 pb-12`}
+          >Formal invitations to come this summer.</h2>
+        </div>
       </div>
       <style jsx={true}>{`
         @media screen and (max-width: 767px) {
           .border-bottom--left {
-            border-bottom: 4px solid #A20B5C;
+            border-bottom: 4px solid #a20b5c;
           }
         }
       `}</style>
     </div>
-  )
+  );
 }

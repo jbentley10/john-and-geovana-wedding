@@ -18,9 +18,9 @@ import { gradientBG } from '../utils/constants';
         <div className={`w-5/12`} />
         <div className={`pr-12 w-7/12 z-20`}>
           <Image 
-            src={`/images/geo-john-peaches.webp`}
+            src={`/images/geo-john-look.webp`}
             layout={`intrinsic`}
-            height={600}
+            height={500}
             width={400}
             alt={`John, Geovana, and Peaches hanging out at a park in Portland.`}
           />
@@ -39,7 +39,7 @@ import { gradientBG } from '../utils/constants';
         </div>
         <div className={`w-5/12 z-20`} />
       </div>
-      <div className={`flex h-2 sm:h-64 md:-mt-12 ${gradientBG}`}>
+      {/* <div className={`flex h-2 sm:h-64 md:-mt-12 ${gradientBG}`}>
         <div className={`border-center w-7/12`} />
         <div className={`w-5/12`} />
       </div>
@@ -47,7 +47,7 @@ import { gradientBG } from '../utils/constants';
         <div className={`w-7/12 bg-gradient-to-r from-nude-1 to-nude-2`} />
         <div className={`w-3/12 border-bottom--right`} />
         <div className={`w-2/12 bg-gradient-to-r from-nude-3 to-nude-4`} />
-      </div>
+      </div> */}
       <style jsx={true}>{`
         @media screen and (min-width: 768px) {
           .border-center {

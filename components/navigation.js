@@ -24,6 +24,7 @@ export default function Navigation() {
         <Link to={`/`} href={`/`}>
           <h3 className={`font-john-mayer text-h3 text-uppercase text-text-color cursor-pointer`}>G&J</h3>
         </Link>
+        {/* <p className={`font-jost text-p text-text-color`}> - Portland, Oregon - 7/29/2022</p> */}
       </div>
 
       {/* Mobile Navigation */}
@@ -54,9 +55,9 @@ export default function Navigation() {
       </div> */}
       {/* Desktop Navigation */}
       <div className={`hidden md:inline`}>
-        {/* <ul>
+        <ul>
           <li className={navigationLinkStyles}><Link to={`/`} href={`/`}>Home</Link></li>
-        </ul> */}
+        </ul>
       </div>
     </div>
   )

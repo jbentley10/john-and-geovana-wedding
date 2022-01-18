@@ -2,7 +2,7 @@
  * @file left-right-text.js
  */
 
-import { h1Styles, h2Styles } from "../utils/constants";
+import { h2Styles, paragraphStyles } from "../utils/constants";
 
 export default function LeftRightText() {
   return (
@@ -11,13 +11,20 @@ export default function LeftRightText() {
       <div className={`text-left w-full`}>
         <div>
           <h2
-            className={`font-john-mayer text-h2 text-text-color leading-13 pb-12`}
+            className={`${h2Styles} pb-12`}
           >
             We hope you'll be there to celebrate with us in Portland, Oregon!
           </h2>
           <h2
-            className={`font-john-mayer text-h2 text-text-color leading-13 pb-12`}
-          >Formal invitations to come this summer.</h2>
+            className={`${h2Styles} pb-12`}
+          >
+            Formal invitations to come this summer.
+          </h2>
+          <p className={`${paragraphStyles} pb-12`}>
+            Important Details: Although we love your little ones, this is an
+            adult only affair for those 21 and over. We thank you for your
+            understanding.
+          </p>
         </div>
       </div>
       <style jsx={true}>{`

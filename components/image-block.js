@@ -22,7 +22,9 @@ import { gradientBG } from '../utils/constants';
             layout={`intrinsic`}
             height={500}
             width={400}
-            alt={`John, Geovana, and Peaches hanging out at a park in Portland.`}
+            alt={`John and Geovana embracing in front of the Steel Bridge.`}
+            loading={'lazy'}
+            lazyBoundary={400}
           />
         </div>
       </div>
@@ -35,6 +37,8 @@ import { gradientBG } from '../utils/constants';
             height={500}
             width={400}
             alt={`Geovana showing her ring.`}
+            loading={'lazy'}
+            lazyBoundary={400}
           />
         </div>
         <div className={`w-5/12 z-20`} />

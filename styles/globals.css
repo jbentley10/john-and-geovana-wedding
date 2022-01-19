@@ -34,3 +34,8 @@
   font-style: normal;
   font-weight: 500;
 }
+
+input::placeholder, textarea::placeholder {
+  color: #333333;
+  opacity: .5;
+}

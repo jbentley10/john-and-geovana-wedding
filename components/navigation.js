@@ -19,7 +19,7 @@ export default function Navigation() {
   };
 
   return (
-    <div className={`fixed w-4/5 m-auto`}>
+    <div className={`fixed w-4/5 m-auto z-50`}>
       <div className={`flex justify-between`}>
         <div className={``}>
           <Link to={`/`} href={`/`}>

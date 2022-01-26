@@ -13,6 +13,7 @@ import Link from 'next/link';
 
 // Import styles
 import { h2Styles, h5Styles, buttonStyles, paragraphStyles, linkStyles } from "../utils/constants";
+import mapStyles from '../styles/mapStyles';
 
 // Import data
 import markers from '../data/markers.json';
@@ -47,12 +48,17 @@ export default function Map() {
       <GoogleMap
         defaultZoom={11}
         defaultCenter={{ lat: 45.5201952, lng: -122.6728248 }}
+        //defaultOptions={{styles: mapStyles}}
       >
         <Marker
           position={{ lat: markersCopy[0].lat, lng: markersCopy[0].lng }}
           onClick={() => {
             setSelectedMarker(markersCopy[0]);
             console.log(markersCopy[0].name);
+          }}
+          icon={{
+            url: '/images/church.svg',
+            scaledSize: new window.google.maps.Size(35, 35)
           }}
         />
         <Marker 
@@ -61,12 +67,20 @@ export default function Map() {
             setSelectedMarker(markersCopy[1]);
             console.log(markersCopy[1].name);
           }}
+          icon={{
+            url: '/images/hotel.svg',
+            scaledSize: new window.google.maps.Size(35, 35)
+          }}
         />
         <Marker 
           position={{ lat: markersCopy[2].lat, lng: markersCopy[2].lng }} 
           onClick={() => {
             setSelectedMarker(markersCopy[2]);
             console.log(markersCopy[2].name);
+          }}
+          icon={{
+            url: '/images/plane.svg',
+            scaledSize: new window.google.maps.Size(35, 35)
           }}
         />
         { selectedMarker && (

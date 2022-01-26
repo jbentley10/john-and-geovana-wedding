@@ -6,7 +6,7 @@ import { h2Styles, h5Styles, paragraphStyles } from "../utils/constants";
 
 export default function LeftRightText() {
   return (
-    <div id="about" className={`w-full p-0 xl:px-72`}>
+    <div id="about" className={`w-full md:w-1/2 p-0 m-auto`}>
       {/* Left Text */}
       <div className={`text-left w-full`}>
         <div>
@@ -16,17 +16,19 @@ export default function LeftRightText() {
           <h2 className={`${h2Styles} pb-12`}>
             Formal invitations to come this summer.
           </h2>
-          <h5 className={`${h5Styles}`}>Important Details:</h5>
-          <p className={`${paragraphStyles} pb-6`}>
-            Although we love your little ones, this is an adults-only affair for
-            those 21 and over. We thank you for your understanding.
-          </p>
-          <p className={`${paragraphStyles}`}>
-            Health & Safety: We are requiring all guests and vendors who are
-            attending our wedding to be fully vaccinated. If vaccination is not
-            possible, while we’d love for you to join in on the festivities, we
-            unfortunately cannot budge on this.
-          </p>
+          <div className={`pb-12`}>
+            <h5 className={`${h5Styles}`}>Important Details:</h5>
+            <p className={`${paragraphStyles} pb-6`}>
+              Although we love your little ones, this is an adults-only affair for
+              those 21 and over. We thank you for your understanding.
+            </p>
+            <p className={`${paragraphStyles}`}>
+              Health & Safety: We are requiring all guests and vendors who are
+              attending our wedding to be fully vaccinated. If vaccination is not
+              possible, while we’d love for you to join in on the festivities, we
+              unfortunately cannot budge on this.
+            </p>
+          </div>
         </div>
       </div>
       <style jsx={true}>{`

@@ -7,13 +7,40 @@ import {
   withGoogleMap,
   GoogleMap,
   Marker,
+  InfoWindow
 } from "react-google-maps";
+import Link from 'next/link';
 
 // Import styles
-import { h2Styles, h5Styles, paragraphStyles } from "../utils/constants";
+import { h2Styles, h5Styles, buttonStyles, paragraphStyles, linkStyles } from "../utils/constants";
+
+// Import data
+import markers from '../data/markers.json';
+import { useState } from "react";
 
 export default function Map() {
   const GOOGLE_MAPS_API = process.env.GOOGLE_MAPS_API;
+  const markersCopy = [
+    {
+        "name": "Castaway",
+        "lat": 45.5365861,
+        "lng": -122.6916165,
+        "link": "https://goo.gl/maps/Y3Ln4edF7SrdfsNfA"
+    },
+    {
+        "name": "Hotel deLuxe",
+        "lat": 45.5209862,
+        "lng": -122.6876944,
+        "link": "https://g.page/HoteldeLuxePortland?share"
+    },
+    {
+        "name": "Portland International Airport",
+        "lat": 45.5897694,
+        "lng": -122.5972829,
+        "link": "https://goo.gl/maps/N4zJanFxJRHB3iUp9"
+    }
+  ];
+  const [selectedMarker, setSelectedMarker] = useState();
 
   const MyMapComponent = withScriptjs(
     withGoogleMap((props) => (
@@ -22,31 +49,42 @@ export default function Map() {
         defaultCenter={{ lat: 45.5201952, lng: -122.6728248 }}
       >
         <Marker
-          position={{ lat: 45.5365861, lng: -122.6916165 }}
-          onLoad={(marker) => {
-            const customIcon = (opts) =>
-              Object.assign(
-                {
-                  path: "M12.75 0l-2.25 2.25 2.25 2.25-5.25 6h-5.25l4.125 4.125-6.375 8.452v0.923h0.923l8.452-6.375 4.125 4.125v-5.25l6-5.25 2.25 2.25 2.25-2.25-11.25-11.25zM10.5 12.75l-1.5-1.5 5.25-5.25 1.5 1.5-5.25 5.25z",
-                  fillColor: "#34495e",
-                  fillOpacity: 1,
-                  strokeColor: "#000",
-                  strokeWeight: 1,
-                  scale: 1,
-                },
-                opts
-              );
-
-            marker.setIcon(
-              customIcon({
-                fillColor: "green",
-                strokeColor: "white",
-              })
-            );
-            return markerLoadHandler(marker, place);
+          position={{ lat: markersCopy[0].lat, lng: markersCopy[0].lng }}
+          onClick={() => {
+            setSelectedMarker(markersCopy[0]);
+            console.log(markersCopy[0].name);
           }}
         />
-        <Marker position={{ lat: 45.5897694, lng: -122.5972829 }} />
+        <Marker 
+          position={{ lat: markersCopy[1].lat, lng: markersCopy[1].lng }} 
+          onClick={() => {
+            setSelectedMarker(markersCopy[1]);
+            console.log(markersCopy[1].name);
+          }}
+        />
+        <Marker 
+          position={{ lat: markersCopy[2].lat, lng: markersCopy[2].lng }} 
+          onClick={() => {
+            setSelectedMarker(markersCopy[2]);
+            console.log(markersCopy[2].name);
+          }}
+        />
+        { selectedMarker && (
+          <InfoWindow
+            position={{
+              lat: selectedMarker.lat,
+              lng: selectedMarker.lng
+            }}
+            onCloseClick={() => {
+              setSelectedMarker(null);
+            }}
+          >
+            <div>
+              <h5 className={`${h5Styles}`}>{selectedMarker.name}</h5>
+              <Link href={selectedMarker.link}><a className={linkStyles} target="blank">View on Google Maps</a></Link>
+            </div>
+          </InfoWindow>
+        )}
       </GoogleMap>
     ))
   );
@@ -69,9 +107,15 @@ export default function Map() {
               </p>
             </li>
             <li className="mb-8 list-disc text-purple">
-              <h5 className={`${h5Styles}`}>Airport</h5>
+              <h5 className={`${h5Styles}`}>Portland International Airport</h5>
               <p className={`${paragraphStyles}`}>
                 7000 NE Airport Way, Portland, OR 97218
+              </p>
+            </li>
+            <li className="mb-8 list-disc text-purple">
+              <h5 className={`${h5Styles}`}>Hotel deLuxe</h5>
+              <p className={`${paragraphStyles}`}>
+                729 SW 15th Ave, Portland, OR 97205
               </p>
             </li>
           </ul>

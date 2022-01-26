@@ -20,7 +20,14 @@ module.exports = {
         // Text
         'text-color': '#4D4D4D',
         'link-color': '#7C177B',
-        'white': '#ffffff'
+        'white': '#ffffff',
+        // Gradients
+        'purple-gradient-1': '#9F3F61',
+        'orange-gradient-2': '#F1A461',
+        'gradient-point-1': '#858C8A',
+        'gradient-point-2': '#AD5164',
+        'gradient-point-3': '#D6DBD5',
+        'gradient-point-4': '#F8C585'
       },
       fontSize: {
         'huge-desktop': '7rem',

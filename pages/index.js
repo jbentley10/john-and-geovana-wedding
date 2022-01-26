@@ -49,7 +49,7 @@ export default function Home() {
 
       <ImageBlock />
 
-      {/* <Schedule /> */}
+      <Schedule />
 
       <div className={`${pageLayoutStyles}`}>
         <Map />

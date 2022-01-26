@@ -3,29 +3,48 @@
  */
 // Import styles
 import { useState } from 'react';
-import { h2Styles, linkStyles, borderStyles } from '../utils/constants';
+import { h2Styles, h3Styles, h5Styles, linkStyles, paragraphStyles, borderStyles } from '../utils/constants';
 
 export default function Schedule() {
-  const [currentDay, setCurrentDay] = useState('Thu');
+  const [currentDay, setCurrentDay] = useState('Fri');
 
   // Schedule content for each day
   const ThursdayContent = () => {
     return (
-      <p>The wedding party is invited to join us for our reception rehearsal, followed
-        by dinner.
-      </p>
+      <h3 className={`${h3Styles}`}>To be announced...</h3>
     )
   }
 
   const FridayContent = () => {
     return (
-      <p>Wedding ceremony and reception!</p>
+      <div>
+        <div className={'inline'}>
+          <h3 className={`${h3Styles}`}>Ceremony</h3>
+          <h5 className={`${h5Styles}`}>3:30pm-4pm</h5>
+          <p className={`${paragraphStyles} pb-8`}></p>
+        </div>
+        
+
+        <div className={'inline'}>
+          <h3 className={`${h3Styles}`}>Cocktail Hour</h3>
+          <h5 className={`${h5Styles}`}>4:30pm-5:30p</h5>
+          <p className={`${paragraphStyles} pb-8`}></p>
+        </div>
+        
+
+        <div className={'inline'}>
+          <h3 className={`${h3Styles}`}>Reception</h3>
+          <h5 className={`${h5Styles}`}>5:30pm-11p</h5>
+          <p className={`${paragraphStyles} pb-8`}></p>
+        </div>
+        
+      </div>
     )
   }
 
   const SaturdayContent = () => {
     return (
-      <p>To be announced...</p>
+      <h3 className={`${h3Styles}`}>To be announced...</h3>
     )
   }
 
@@ -53,7 +72,7 @@ export default function Schedule() {
       <div className={`flex h-full`}>
         <div className={`w-8/12 bg-gradient-to-r from-nude-1 to-nude-2`} />
         
-        <div className={`w-2/12 bg-gradient-to-r from-nude-2 to-nude-3 border-right`}>
+        <div className={`w-2/12 bg-gradient-to-r from-nude-2 to-nude-3`}>
           <div className={`py-32 -ml-96`}>
             <h2 className={`${h2Styles}`}>Schedule</h2>
 
@@ -77,11 +96,6 @@ export default function Schedule() {
         
       </div>
 
-      <div className={`hidden md:flex`}>
-        <div className={`w-7/12 bg-gradient-to-r from-nude-1 to-nude-2`} />
-        <div className={`w-3/12 border-bottom--right`} />
-        <div className={`w-2/12 bg-gradient-to-r from-nude-3 to-nude-4`} />
-      </div>
 
       <style jsx={true}>{`
         @media screen and (min-width: 768px) {

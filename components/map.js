@@ -63,7 +63,7 @@ export default function Map() {
             scaledSize: new window.google.maps.Size(35, 35)
           }}
         />
-        <Marker 
+        {/* <Marker 
           position={{ lat: markers[1].lat, lng: markers[1].lng }} 
           onClick={() => {
             setSelectedMarker(markers[1]);
@@ -73,7 +73,7 @@ export default function Map() {
             url: '/images/hotel.svg',
             scaledSize: new window.google.maps.Size(35, 35)
           }}
-        />
+        /> */}
         <Marker 
           position={{ lat: markers[2].lat, lng: markers[2].lng }} 
           onClick={() => {
@@ -121,12 +121,12 @@ export default function Map() {
                 {markers[0].address}
               </p>
             </li>
-            <li className="mb-8 list-disc text-purple">
+            {/* <li className="mb-8 list-disc text-purple">
               <Link href={markers[1].link}><a target="_blank" className={`${h5Styles} text-purple`}>{markers[2].name}</a></Link>
               <p className={`${paragraphStyles}`}>
               {markers[1].address}
               </p>
-            </li>
+            </li> */}
             <li className="mb-8 list-disc text-purple">
               <Link href={markers[2].link}><a target="_blank" className={`${h5Styles} text-purple`}>{markers[2].name}</a></Link>
               <p className={`${paragraphStyles}`}>

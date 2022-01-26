@@ -96,7 +96,7 @@ export default function Schedule() {
       <div className={`w-full md:w-1/2 pt-8 m-auto`}>
         <h2 className={`${h2Styles}`}>Schedule</h2>
 
-        <div className={`pt-16 pl-12`}>
+        <div className={`pt-2 pl-12`}>
           <ul className={`hidden`}>
             <li className={`p-6`}><a className={`mr-3 lg:mr-32 p-5 ${linkStyles} ${currentDay == 'Thu' && borderStyles}`} onClick={() => handleSetDay('Thu')}>Thu</a></li>
             <li className={`p-6`}><a className={`mr-3 lg:mr-32 p-5 ${linkStyles} ${currentDay == 'Fri' && borderStyles}`} onClick={() => handleSetDay('Fri')}>Fri</a></li>

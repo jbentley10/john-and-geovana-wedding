@@ -1,9 +1,12 @@
 /**
  * @file schedule.js
  */
-// Import styles
+// Import dependencies
 import { useState } from 'react';
-import { h2Styles, h3Styles, h5Styles, linkStyles, paragraphStyles, borderStyles } from '../utils/constants';
+import Link from 'next/link';
+
+// Import styles
+import { h2Styles, h3Styles, h5Styles, buttonStyles, linkStyles, paragraphStyles, borderStyles } from '../utils/constants';
 
 export default function Schedule() {
   const [currentDay, setCurrentDay] = useState('Fri');
@@ -20,22 +23,43 @@ export default function Schedule() {
       <div>
         <div className={'inline'}>
           <h3 className={`${h3Styles}`}>Ceremony</h3>
-          <h5 className={`${h5Styles}`}>3:30pm-4pm</h5>
-          <p className={`${paragraphStyles} pb-8`}></p>
+          <h5 className={`${h5Styles} text-text-color`}>3:30pm-4pm</h5>          
+          <p className={`${paragraphStyles}`}>Castaway Portland</p>
+          <p className={`${paragraphStyles}`}>1900 NW 18th Ave</p>
+          <p className={`${paragraphStyles}`}>Portland, OR 97209</p>
+          <Link href="https://goo.gl/maps/Y3Ln4edF7SrdfsNfA">
+            <button className={`${buttonStyles} block mt-4 mb-8`}>
+              Map
+            </button>
+          </Link>
         </div>
         
 
         <div className={'inline'}>
           <h3 className={`${h3Styles}`}>Cocktail Hour</h3>
-          <h5 className={`${h5Styles}`}>4:30pm-5:30p</h5>
-          <p className={`${paragraphStyles} pb-8`}></p>
+          <h5 className={`${h5Styles} text-text-color`}>4:30pm-5:30p</h5>
+          <p className={`${paragraphStyles}`}>Castaway Portland</p>
+          <p className={`${paragraphStyles}`}>1900 NW 18th Ave</p>
+          <p className={`${paragraphStyles}`}>Portland, OR 97209</p>
+          <Link href="https://goo.gl/maps/Y3Ln4edF7SrdfsNfA">
+            <button className={`${buttonStyles} block mt-4 mb-8`}>
+              Map
+            </button>
+          </Link>
         </div>
         
 
         <div className={'inline'}>
           <h3 className={`${h3Styles}`}>Reception</h3>
-          <h5 className={`${h5Styles}`}>5:30pm-11p</h5>
-          <p className={`${paragraphStyles} pb-8`}></p>
+          <h5 className={`${h5Styles} text-text-color`}>5:30pm-11p</h5>
+          <p className={`${paragraphStyles}`}>Castaway Portland</p>
+          <p className={`${paragraphStyles}`}>1900 NW 18th Ave</p>
+          <p className={`${paragraphStyles}`}>Portland, OR 97209</p>
+          <Link href="https://goo.gl/maps/Y3Ln4edF7SrdfsNfA">
+            <button className={`${buttonStyles} block mt-4 mb-8`}>
+              Map
+            </button>
+          </Link>
         </div>
         
       </div>

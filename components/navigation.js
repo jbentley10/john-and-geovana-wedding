@@ -68,11 +68,11 @@ export default function Navigation() {
                   About
                 </Link>
               </li>
-              <li className={navigationLinkStyles}>
-                <Link to={`/`} href={`/#schedule`}>
+              {/* <li className={navigationLinkStyles}>
+                <Link to={`/`} href={`/schedule`}>
                   Schedule
                 </Link>
-              </li>
+              </li> */}
               <li className={navigationLinkStyles}>
                 <Link to={`/`} href={`/#location`}>
                   Location
@@ -99,11 +99,11 @@ export default function Navigation() {
                 About
               </Link>
             </li>
-            <li className={navigationLinkStyles}>
-              <Link to={`/`} href={`/#schedule`}>
+            {/* <li className={navigationLinkStyles}>
+              <Link to={`/`} href={`/schedule`}>
                 Schedule
               </Link>
-            </li>
+            </li> */}
             <li className={navigationLinkStyles}>
               <Link to={`/`} href={`/#location`}>
                 Location

@@ -9,7 +9,6 @@ import Navigation from '../components/navigation';
 import LeftRightText from '../components/left-right-text';
 import BorderLeft from '../components/border-left';
 import ImageBlock from '../components/image-block';
-import Schedule from '../components/schedule';
 import Map from '../components/map';
 import Footer from '../components/footer';
 import RSVPForm from "../components/rsvp-form";
@@ -50,7 +49,6 @@ export default function Home() {
       <ImageBlock />
 
       <div className={`${pageLayoutStyles}`}>
-        <Schedule />
         <Map />
         {/* <RSVPForm /> */}
         <Footer />

@@ -6,7 +6,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 
 // Import styles
-import { h2Styles, h3Styles, h4Styles, h5Styles, buttonStyles, linkStyles, paragraphStyles, borderStyles } from '../utils/constants';
+import { h1Styles, h2Styles, h3Styles, h4Styles, h5Styles, buttonStyles, linkStyles, paragraphStyles, borderStyles } from '../utils/constants';
 
 export default function Schedule() {
   const [currentDay, setCurrentDay] = useState('Fri');
@@ -14,7 +14,7 @@ export default function Schedule() {
   // Schedule content for each day
   const ThursdayContent = () => {
     return (
-      <h3 className={`${h3Styles}`}>To be announced...</h3>
+      <h2 className={`${h2Styles}`}>To be announced...</h2>
     )
   }
 
@@ -22,8 +22,8 @@ export default function Schedule() {
     return (
       <div>
         <div className={'inline'}>
-          <h4 className={`${h4Styles}`}>Ceremony</h4>
-          <h5 className={`${h5Styles} text-text-color`}>3:30pm-4pm</h5>          
+          <h3 className={`${h3Styles}`}>Ceremony</h3>
+          <h4 className={`${h4Styles} text-text-color`}>3:30pm-4pm</h4>          
           <p className={`${paragraphStyles}`}>Castaway Portland</p>
           <p className={`${paragraphStyles}`}>1900 NW 18th Ave</p>
           <p className={`${paragraphStyles}`}>Portland, OR 97209</p>
@@ -36,8 +36,8 @@ export default function Schedule() {
         
 
         <div className={'inline'}>
-          <h4 className={`${h4Styles}`}>Cocktail Hour</h4>
-          <h5 className={`${h5Styles} text-text-color`}>4:30pm-5:30p</h5>
+          <h3 className={`${h3Styles}`}>Cocktail Hour</h3>
+          <h4 className={`${h4Styles} text-text-color`}>4:30pm-5:30p</h4>
           <p className={`${paragraphStyles}`}>Castaway Portland</p>
           <p className={`${paragraphStyles}`}>1900 NW 18th Ave</p>
           <p className={`${paragraphStyles}`}>Portland, OR 97209</p>
@@ -50,8 +50,8 @@ export default function Schedule() {
         
 
         <div className={'inline'}>
-          <h4 className={`${h4Styles}`}>Reception</h4>
-          <h5 className={`${h5Styles} text-text-color`}>5:30pm-11p</h5>
+          <h3 className={`${h3Styles}`}>Reception</h3>
+          <h4 className={`${h4Styles} text-text-color`}>5:30pm-11p</h4>
           <p className={`${paragraphStyles}`}>Castaway Portland</p>
           <p className={`${paragraphStyles}`}>1900 NW 18th Ave</p>
           <p className={`${paragraphStyles}`}>Portland, OR 97209</p>
@@ -68,7 +68,7 @@ export default function Schedule() {
 
   const SaturdayContent = () => {
     return (
-      <h3 className={`${h3Styles}`}>To be announced...</h3>
+      <h2 className={`${h2Styles}`}>To be announced...</h2>
     )
   }
 
@@ -92,9 +92,9 @@ export default function Schedule() {
   }
 
   return (
-    <div id="schedule">
+    <div className="pt-24 pb-48 md:pt-48" id="schedule">
       <div className={`w-full md:w-1/2 pt-8 m-auto`}>
-        <h2 className={`${h2Styles}`}>Schedule</h2>
+        <h1 className={`${h1Styles}`}>Schedule</h1>
 
         <div className={`pt-2 pl-12`}>
           <ul className={`hidden`}>
@@ -104,7 +104,7 @@ export default function Schedule() {
           </ul>
 
           <div className={`schedule-content`}>
-            <h3 className={`${h3Styles}`}>Friday, July 29, 2022</h3>
+            <h2 className={`${h2Styles}`}>Friday, July 29, 2022</h2>
             { currentDay == 'Thu' && <ThursdayContent /> }
             { currentDay == 'Fri' && <FridayContent /> }
             { currentDay == 'Sat' && <SaturdayContent /> }

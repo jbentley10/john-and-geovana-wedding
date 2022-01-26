@@ -16,32 +16,34 @@ import { h2Styles, h5Styles, buttonStyles, paragraphStyles, linkStyles } from ".
 import mapStyles from '../styles/mapStyles';
 
 // Import data
-import markers from '../data/markers.json';
 import { useState } from "react";
 
 export default function Map() {
   const GOOGLE_MAPS_API = process.env.GOOGLE_MAPS_API;
-  const markersCopy = [
+  const markers = [
     {
-        "name": "Castaway",
+        "name": "Castaway Portland (Ceremony + Reception)",
         "lat": 45.5365861,
         "lng": -122.6916165,
-        "link": "https://goo.gl/maps/Y3Ln4edF7SrdfsNfA"
+        "link": "https://goo.gl/maps/Y3Ln4edF7SrdfsNfA",
+        "address": "1900 NW 18th Ave, Portland, OR 97209"
     },
     {
         "name": "Hotel deLuxe",
         "lat": 45.5209862,
         "lng": -122.6876944,
-        "link": "https://g.page/HoteldeLuxePortland?share"
+        "link": "https://g.page/HoteldeLuxePortland?share",
+        "address": "729 SW 15th Ave, Portland, OR 97205"
     },
     {
         "name": "Portland International Airport",
         "lat": 45.5897694,
         "lng": -122.5972829,
-        "link": "https://goo.gl/maps/N4zJanFxJRHB3iUp9"
+        "link": "https://goo.gl/maps/N4zJanFxJRHB3iUp9",
+        "address": "7000 NE Airport Way, Portland, OR 97218"
     }
   ];
-  const [selectedMarker, setSelectedMarker] = useState();
+  const [selectedMarker, setSelectedMarker] = useState(null);
 
   const MyMapComponent = withScriptjs(
     withGoogleMap((props) => (
@@ -51,10 +53,10 @@ export default function Map() {
         //defaultOptions={{styles: mapStyles}}
       >
         <Marker
-          position={{ lat: markersCopy[0].lat, lng: markersCopy[0].lng }}
+          position={{ lat: markers[0].lat, lng: markers[0].lng }}
           onClick={() => {
-            setSelectedMarker(markersCopy[0]);
-            console.log(markersCopy[0].name);
+            setSelectedMarker(markers[0]);
+            console.log(markers[0].name);
           }}
           icon={{
             url: '/images/church.svg',
@@ -62,10 +64,10 @@ export default function Map() {
           }}
         />
         <Marker 
-          position={{ lat: markersCopy[1].lat, lng: markersCopy[1].lng }} 
+          position={{ lat: markers[1].lat, lng: markers[1].lng }} 
           onClick={() => {
-            setSelectedMarker(markersCopy[1]);
-            console.log(markersCopy[1].name);
+            setSelectedMarker(markers[1]);
+            console.log(markers[1].name);
           }}
           icon={{
             url: '/images/hotel.svg',
@@ -73,10 +75,10 @@ export default function Map() {
           }}
         />
         <Marker 
-          position={{ lat: markersCopy[2].lat, lng: markersCopy[2].lng }} 
+          position={{ lat: markers[2].lat, lng: markers[2].lng }} 
           onClick={() => {
-            setSelectedMarker(markersCopy[2]);
-            console.log(markersCopy[2].name);
+            setSelectedMarker(markers[2]);
+            console.log(markers[2].name);
           }}
           icon={{
             url: '/images/plane.svg',
@@ -114,21 +116,21 @@ export default function Map() {
           <h2 className={`${h2Styles}`}>Get to know PDX</h2>
           <ul>
             <li className="mb-8 list-disc text-purple">
-            <Link href="https://goo.gl/maps/Y3Ln4edF7SrdfsNfA"><a target="_blank" className={`${h5Styles}`}>Castaway Portland (Ceremony + Reception)</a></Link>
+            <Link href={markers[0].link}><a target="_blank" className={`${h5Styles} text-purple`}>{markers[0].name}</a></Link>
               <p className={`${paragraphStyles}`}>
-                1900 NW 18th Ave, Portland, OR 97209
+                {markers[0].address}
               </p>
             </li>
             <li className="mb-8 list-disc text-purple">
-              <Link href="https://goo.gl/maps/N4zJanFxJRHB3iUp9"><a target="_blank" className={`${h5Styles} text-purple`}>Portland International Airport</a></Link>
+              <Link href={markers[1].link}><a target="_blank" className={`${h5Styles} text-purple`}>{markers[2].name}</a></Link>
               <p className={`${paragraphStyles}`}>
-                7000 NE Airport Way, Portland, OR 97218
+              {markers[1].address}
               </p>
             </li>
             <li className="mb-8 list-disc text-purple">
-              <Link href="https://g.page/HoteldeLuxePortland?share"><a target="_blank" className={`${h5Styles} text-purple`}>Hotel deLuxe</a></Link>
+              <Link href={markers[2].link}><a target="_blank" className={`${h5Styles} text-purple`}>{markers[2].name}</a></Link>
               <p className={`${paragraphStyles}`}>
-                729 SW 15th Ave, Portland, OR 97205
+              {markers[2].address}
               </p>
             </li>
           </ul>

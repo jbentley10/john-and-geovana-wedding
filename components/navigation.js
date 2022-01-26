@@ -19,44 +19,71 @@ export default function Navigation() {
   };
 
   return (
-    <div className={`flex justify-between`}>
-      <div className={``}>
-        <Link to={`/`} href={`/`}>
-          <h3
-            className={`font-john-mayer text-h3 text-uppercase text-text-color cursor-pointer`}
-          >
-            G&J
-          </h3>
-        </Link>
-        {/* <p className={`font-jost text-p text-text-color`}> - Portland, Oregon - 7/29/2022</p> */}
-      </div>
+    <div className={`fixed w-4/5 m-auto`}>
+      <div className={`flex justify-between`}>
+        <div className={``}>
+          <Link to={`/`} href={`/`}>
+            <h3
+              className={`font-john-mayer text-h3 text-uppercase text-text-color cursor-pointer`}
+            >
+              G&J
+            </h3>
+          </Link>
+          {/* <p className={`font-jost text-p text-text-color`}> - Portland, Oregon - 7/29/2022</p> */}
+        </div>
 
-      {/* Mobile Navigation */}
-      <div className={`flex-initial md:hidden`}>
-        <Menu
-          right
-          noOverlay
-          onStateChange={handleOnMenuStateChange}
-          isOpen={isMenuOpen}
-          className={menuClass}
-          htmlClassName=""
-          bodyClassName=""
-          burgerButtonClassName={"h-full md:hidden"}
-          burgerBarClassName={`md:hidden`}
-          crossButtonClassName={`md:hidden`}
-          crossClassName={``}
-          menuClassName={`md:hidden`}
-          morphShapeClassName={``}
-          itemListClassName={``}
-          overlayClassName={""}
-          customBurgerIcon={
-            <Image src="/menu-burger.svg" width={50} height={50} />
-          }
-          customCrossIcon={
-            <Image src="/menu-cross.svg" width={50} height={50} />
-          }
-        >
-          <ul className={`block outline-none`}>
+        {/* Mobile Navigation */}
+        <div className={`flex-initial md:hidden`}>
+          <Menu
+            right
+            noOverlay
+            onStateChange={handleOnMenuStateChange}
+            isOpen={isMenuOpen}
+            className={menuClass}
+            htmlClassName=""
+            bodyClassName=""
+            burgerButtonClassName={"h-full md:hidden"}
+            burgerBarClassName={`md:hidden`}
+            crossButtonClassName={`md:hidden`}
+            crossClassName={``}
+            menuClassName={`md:hidden`}
+            morphShapeClassName={``}
+            itemListClassName={``}
+            overlayClassName={""}
+            customBurgerIcon={
+              <Image src="/menu-burger.svg" width={50} height={50} />
+            }
+            customCrossIcon={
+              <Image src="/menu-cross.svg" width={50} height={50} />
+            }
+          >
+            <ul className={`block outline-none`}>
+              <li className={navigationLinkStyles}>
+                <Link to={`/`} href={`/`}>
+                  Home
+                </Link>
+              </li>
+              <li className={navigationLinkStyles}>
+                <Link to={`/`} href={`/#about`}>
+                  About
+                </Link>
+              </li>
+              <li className={navigationLinkStyles}>
+                <Link to={`/`} href={`/#location`}>
+                  Location
+                </Link>
+              </li>
+              {/* <li className={navigationLinkStyles}>
+                <Link to={`/`} href={`/#rsvp`}>
+                  RSVP
+                </Link>
+              </li> */}
+            </ul>
+          </Menu>
+        </div>
+        {/* Desktop Navigation */}
+        <div className={`hidden md:inline`}>
+          <ul>
             <li className={navigationLinkStyles}>
               <Link to={`/`} href={`/`}>
                 Home
@@ -78,32 +105,7 @@ export default function Navigation() {
               </Link>
             </li> */}
           </ul>
-        </Menu>
-      </div>
-      {/* Desktop Navigation */}
-      <div className={`hidden md:inline`}>
-        <ul>
-          <li className={navigationLinkStyles}>
-            <Link to={`/`} href={`/`}>
-              Home
-            </Link>
-          </li>
-          <li className={navigationLinkStyles}>
-            <Link to={`/`} href={`/#about`}>
-              About
-            </Link>
-          </li>
-          <li className={navigationLinkStyles}>
-            <Link to={`/`} href={`/#location`}>
-              Location
-            </Link>
-          </li>
-          {/* <li className={navigationLinkStyles}>
-            <Link to={`/`} href={`/#rsvp`}>
-              RSVP
-            </Link>
-          </li> */}
-        </ul>
+        </div>
       </div>
     </div>
   );

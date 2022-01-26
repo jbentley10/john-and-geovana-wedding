@@ -69,30 +69,22 @@ export default function Schedule() {
 
   return (
     <>
-      <div className={`flex h-full`}>
-        <div className={`w-8/12 bg-gradient-to-r from-nude-1 to-nude-2`} />
-        
-        <div className={`w-2/12 bg-gradient-to-r from-nude-2 to-nude-3`}>
-          <div className={`py-32 -ml-96`}>
-            <h2 className={`${h2Styles}`}>Schedule</h2>
+      <div className={`w-full md:w-1/2 p-0 m-auto`}>
+        <h2 className={`${h2Styles}`}>Schedule</h2>
 
-            <div className={`pt-16 pl-12`}>
-              <ul className={`flex`}>
-                <li className={`p-6`}><a className={`mr-32 p-5 ${linkStyles} ${currentDay == 'Thu' && borderStyles}`} onClick={() => handleSetDay('Thu')}>Thu</a></li>
-                <li className={`p-6`}><a className={`mr-32 p-5 ${linkStyles} ${currentDay == 'Fri' && borderStyles}`} onClick={() => handleSetDay('Fri')}>Fri</a></li>
-                <li className={`p-6`}><a className={`mr-32 p-5 ${linkStyles} ${currentDay == 'Sat' && borderStyles}`} onClick={() => handleSetDay('Sat')}>Sat</a></li>
-              </ul>
+        <div className={`pt-16 pl-12`}>
+          <ul className={`flex`}>
+            <li className={`p-6`}><a className={`mr-3 lg:mr-32 p-5 ${linkStyles} ${currentDay == 'Thu' && borderStyles}`} onClick={() => handleSetDay('Thu')}>Thu</a></li>
+            <li className={`p-6`}><a className={`mr-3 lg:mr-32 p-5 ${linkStyles} ${currentDay == 'Fri' && borderStyles}`} onClick={() => handleSetDay('Fri')}>Fri</a></li>
+            <li className={`p-6`}><a className={`mr-3 lg:mr-32 p-5 ${linkStyles} ${currentDay == 'Sat' && borderStyles}`} onClick={() => handleSetDay('Sat')}>Sat</a></li>
+          </ul>
 
-              <div className={`schedule-content`}>
-                { currentDay == 'Thu' && <ThursdayContent /> }
-                { currentDay == 'Fri' && <FridayContent /> }
-                { currentDay == 'Sat' && <SaturdayContent /> }
-              </div>
-            </div>
+          <div className={`schedule-content`}>
+            { currentDay == 'Thu' && <ThursdayContent /> }
+            { currentDay == 'Fri' && <FridayContent /> }
+            { currentDay == 'Sat' && <SaturdayContent /> }
           </div>
         </div>
-
-        <div className={`w-2/12 bg-gradient-to-r from-nude-3 to-nude-4`} />
         
       </div>
 

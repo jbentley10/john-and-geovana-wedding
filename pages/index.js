@@ -49,9 +49,8 @@ export default function Home() {
 
       <ImageBlock />
 
-      <Schedule />
-
       <div className={`${pageLayoutStyles}`}>
+        <Schedule />
         <Map />
         {/* <RSVPForm /> */}
         <Footer />

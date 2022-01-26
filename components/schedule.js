@@ -93,7 +93,7 @@ export default function Schedule() {
 
   return (
     <div id="schedule">
-      <div className={`w-full md:w-1/2 p-0 m-auto`}>
+      <div className={`w-full md:w-1/2 pt-8 m-auto`}>
         <h2 className={`${h2Styles}`}>Schedule</h2>
 
         <div className={`pt-16 pl-12`}>

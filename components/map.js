@@ -114,20 +114,19 @@ export default function Map() {
           <h2 className={`${h2Styles}`}>Get to know PDX</h2>
           <ul>
             <li className="mb-8 list-disc text-purple">
-              <h5 className={`${h5Styles}`}>Ceremony + Reception</h5>
-              <p className={`${paragraphStyles}`}>Castaway Portland</p>
+            <Link href="https://goo.gl/maps/Y3Ln4edF7SrdfsNfA"><a target="_blank" className={`${h5Styles}`}>Castaway Portland (Ceremony + Reception)</a></Link>
               <p className={`${paragraphStyles}`}>
                 1900 NW 18th Ave, Portland, OR 97209
               </p>
             </li>
             <li className="mb-8 list-disc text-purple">
-              <h5 className={`${h5Styles}`}>Portland International Airport</h5>
+              <Link href="https://goo.gl/maps/N4zJanFxJRHB3iUp9"><a target="_blank" className={`${h5Styles} text-purple`}>Portland International Airport</a></Link>
               <p className={`${paragraphStyles}`}>
                 7000 NE Airport Way, Portland, OR 97218
               </p>
             </li>
             <li className="mb-8 list-disc text-purple">
-              <h5 className={`${h5Styles}`}>Hotel deLuxe</h5>
+              <Link href="https://g.page/HoteldeLuxePortland?share"><a target="_blank" className={`${h5Styles} text-purple`}>Hotel deLuxe</a></Link>
               <p className={`${paragraphStyles}`}>
                 729 SW 15th Ave, Portland, OR 97205
               </p>

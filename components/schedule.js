@@ -6,7 +6,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 
 // Import styles
-import { h2Styles, h3Styles, h5Styles, buttonStyles, linkStyles, paragraphStyles, borderStyles } from '../utils/constants';
+import { h2Styles, h3Styles, h4Styles, h5Styles, buttonStyles, linkStyles, paragraphStyles, borderStyles } from '../utils/constants';
 
 export default function Schedule() {
   const [currentDay, setCurrentDay] = useState('Fri');
@@ -22,7 +22,7 @@ export default function Schedule() {
     return (
       <div>
         <div className={'inline'}>
-          <h3 className={`${h3Styles}`}>Ceremony</h3>
+          <h4 className={`${h4Styles}`}>Ceremony</h4>
           <h5 className={`${h5Styles} text-text-color`}>3:30pm-4pm</h5>          
           <p className={`${paragraphStyles}`}>Castaway Portland</p>
           <p className={`${paragraphStyles}`}>1900 NW 18th Ave</p>
@@ -36,7 +36,7 @@ export default function Schedule() {
         
 
         <div className={'inline'}>
-          <h3 className={`${h3Styles}`}>Cocktail Hour</h3>
+          <h4 className={`${h4Styles}`}>Cocktail Hour</h4>
           <h5 className={`${h5Styles} text-text-color`}>4:30pm-5:30p</h5>
           <p className={`${paragraphStyles}`}>Castaway Portland</p>
           <p className={`${paragraphStyles}`}>1900 NW 18th Ave</p>
@@ -50,7 +50,7 @@ export default function Schedule() {
         
 
         <div className={'inline'}>
-          <h3 className={`${h3Styles}`}>Reception</h3>
+          <h4 className={`${h4Styles}`}>Reception</h4>
           <h5 className={`${h5Styles} text-text-color`}>5:30pm-11p</h5>
           <p className={`${paragraphStyles}`}>Castaway Portland</p>
           <p className={`${paragraphStyles}`}>1900 NW 18th Ave</p>
@@ -97,13 +97,14 @@ export default function Schedule() {
         <h2 className={`${h2Styles}`}>Schedule</h2>
 
         <div className={`pt-16 pl-12`}>
-          <ul className={`flex`}>
+          <ul className={`hidden`}>
             <li className={`p-6`}><a className={`mr-3 lg:mr-32 p-5 ${linkStyles} ${currentDay == 'Thu' && borderStyles}`} onClick={() => handleSetDay('Thu')}>Thu</a></li>
             <li className={`p-6`}><a className={`mr-3 lg:mr-32 p-5 ${linkStyles} ${currentDay == 'Fri' && borderStyles}`} onClick={() => handleSetDay('Fri')}>Fri</a></li>
             <li className={`p-6`}><a className={`mr-3 lg:mr-32 p-5 ${linkStyles} ${currentDay == 'Sat' && borderStyles}`} onClick={() => handleSetDay('Sat')}>Sat</a></li>
           </ul>
 
           <div className={`schedule-content`}>
+            <h3 className={`${h3Styles}`}>Friday, July 29, 2022</h3>
             { currentDay == 'Thu' && <ThursdayContent /> }
             { currentDay == 'Fri' && <FridayContent /> }
             { currentDay == 'Sat' && <SaturdayContent /> }

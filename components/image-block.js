@@ -10,13 +10,13 @@ import { gradientBG } from '../utils/constants';
  export default function ImageBlock() {
    return (
      <div className={`image-block`}>
-      <div className={`flex h-12 md:h-64 ${gradientBG}`}>
+      <div className={`flex h-12 md:h-64`}>
         <div className={`border-center w-7/12`} />
         <div className={`w-5/12`} />
       </div>
-      <div className={`flex h-full ${gradientBG}`}>
+      <div className={`flex h-full`}>
         <div className={`w-5/12`} />
-        <div className={`pr-12 w-7/12 z-20`}>
+        <div className={`pr-0 md:pr-10 w-fit md:w-7/12 z-20`}>
           <Image 
             src={`/images/geo-john-look.webp`}
             layout={`intrinsic`}
@@ -26,9 +26,9 @@ import { gradientBG } from '../utils/constants';
           />
         </div>
       </div>
-      <div className={`flex h-full ${gradientBG}`}>
+      <div className={`flex h-full`}>
         <div className={`w-2/12`} />
-        <div className={`w-5/12 -mt-14 z-30 ml-4`}>
+        <div className={`w-fit md:w-5/12 -mt-14 z-30 -ml-4 md:ml-4`}>
           <Image 
             src={`/images/geo-ring.webp`}
             layout={`intrinsic`}
@@ -39,15 +39,11 @@ import { gradientBG } from '../utils/constants';
         </div>
         <div className={`w-5/12 z-20`} />
       </div>
-      {/* <div className={`flex h-2 sm:h-64 md:-mt-12 ${gradientBG}`}>
-        <div className={`border-center w-7/12`} />
+      <div className={`flex h-12 md:h-64 -mt-4 mb-8`}>
+        <div className={`border-center w-4/12`} />
         <div className={`w-5/12`} />
       </div>
-      <div className={`hidden md:flex`}>
-        <div className={`w-7/12 bg-gradient-to-r from-nude-1 to-nude-2`} />
-        <div className={`w-3/12 border-bottom--right`} />
-        <div className={`w-2/12 bg-gradient-to-r from-nude-3 to-nude-4`} />
-      </div> */}
+
       <style jsx={true}>{`
         @media screen and (min-width: 768px) {
           .border-center {

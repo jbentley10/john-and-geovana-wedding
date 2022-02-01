@@ -34,3 +34,10 @@
   font-style: normal;
   font-weight: 500;
 }
+
+.gradient-circle {
+  width: 60rem;
+  height: 5rem;
+  border-radius: 37px;
+  background: linear-gradient(45deg, #a20a5b59, #f3b474, transparent);
+}

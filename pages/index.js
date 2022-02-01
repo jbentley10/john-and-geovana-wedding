@@ -41,12 +41,14 @@ export default function Home() {
         
         <Hero/>
 
+        <BorderLeft />
+
+        <ImageBlock />
+
         <LeftRightText />
       </div>
 
-      <BorderLeft />
-
-      <ImageBlock />
+      
 
       <div className={`${pageLayoutStyles}`}>
         <Map />

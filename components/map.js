@@ -111,7 +111,7 @@ export default function Map() {
         <div className={`border-center w-8/12`} />
         <div className={`w-5/12`} />
       </div>
-      <div className={`inline md:flex h-full`}>
+      <div className={`inline md:flex h-full sm:mb-4`}>
         <div className={`w-full md:w-6/12`}>
           <h2 className={`${h2Styles}`}>Get to know PDX</h2>
           <ul>
@@ -121,12 +121,6 @@ export default function Map() {
                 {markers[0].address}
               </p>
             </li>
-            {/* <li className="mb-8 list-disc text-purple">
-              <Link href={markers[1].link}><a target="_blank" className={`${h5Styles} text-purple`}>{markers[2].name}</a></Link>
-              <p className={`${paragraphStyles}`}>
-              {markers[1].address}
-              </p>
-            </li> */}
             <li className="mb-8 list-disc text-purple">
               <Link href={markers[2].link}><a target="_blank" className={`${h5Styles} text-purple`}>{markers[2].name}</a></Link>
               <p className={`${paragraphStyles}`}>
@@ -140,7 +134,7 @@ export default function Map() {
             <MyMapComponent
               googleMapURL={'https://maps.googleapis.com/maps/api/js?key=AIzaSyAmO1McaQgHA3FLjboz6l2UYqOyYTeAtfo&libraries=geometry,drawing,places'}
               loadingElement={<div style={{ height: `100%` }} />}
-              containerElement={<div style={{ height: `400px` }} />}
+              containerElement={<div style={{ height: `100%` }} />}
               mapElement={<div style={{ height: `100%` }} />}
             />
           </div>

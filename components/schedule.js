@@ -23,6 +23,10 @@ export default function Schedule() {
       <div>
         <div className={'inline'}>
           <h3 className={`${h3Styles}`}>Ceremony</h3>
+          <h4 className={`${h4Styles} text-text-color`}>Tentative start time of 3:30pm. Details to be announced!</h4>
+        </div>
+        {/* <div className={'inline'}>
+          <h3 className={`${h3Styles}`}>Ceremony</h3>
           <h4 className={`${h4Styles} text-text-color`}>3:30pm-4pm</h4>          
           <p className={`${paragraphStyles}`}>Castaway Portland</p>
           <p className={`${paragraphStyles}`}>1900 NW 18th Ave</p>
@@ -60,7 +64,7 @@ export default function Schedule() {
               Map
             </button>
           </Link>
-        </div>
+        </div> */}
         
       </div>
     )

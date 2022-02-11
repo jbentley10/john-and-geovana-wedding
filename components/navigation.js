@@ -22,7 +22,7 @@ export default function Navigation() {
     <div className={`fixed w-4/5 m-auto z-50`}>
       <div className={`flex justify-between`}>
         <div className={``}>
-          <Link href={`#top`}>
+          <Link href={`/#top`}>
             <h3
               className={`font-john-mayer text-h3 text-uppercase text-text-color cursor-pointer`}
             >
@@ -100,7 +100,7 @@ export default function Navigation() {
               </Link>
             </li>
             <li className={navigationLinkStyles}>
-              <Link to={`/`} href={`/schedule`}>
+              <Link to={`/schedule`} href={`/schedule`}>
                 Schedule
               </Link>
             </li>

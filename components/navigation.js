@@ -22,7 +22,7 @@ export default function Navigation() {
     <div className={`fixed w-4/5 m-auto z-50`}>
       <div className={`flex justify-between`}>
         <div className={``}>
-          <Link to={`/`} href={`/`}>
+          <Link href={`#top`}>
             <h3
               className={`font-john-mayer text-h3 text-uppercase text-text-color cursor-pointer`}
             >
@@ -68,11 +68,11 @@ export default function Navigation() {
                   About
                 </Link>
               </li>
-              {/* <li className={navigationLinkStyles}>
+              <li className={navigationLinkStyles}>
                 <Link to={`/`} href={`/schedule`}>
                   Schedule
                 </Link>
-              </li> */}
+              </li>
               <li className={navigationLinkStyles}>
                 <Link to={`/`} href={`/#location`}>
                   Location
@@ -99,11 +99,11 @@ export default function Navigation() {
                 About
               </Link>
             </li>
-            {/* <li className={navigationLinkStyles}>
+            <li className={navigationLinkStyles}>
               <Link to={`/`} href={`/schedule`}>
                 Schedule
               </Link>
-            </li> */}
+            </li>
             <li className={navigationLinkStyles}>
               <Link to={`/`} href={`/#location`}>
                 Location

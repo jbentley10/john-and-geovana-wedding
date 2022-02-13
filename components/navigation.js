@@ -22,7 +22,7 @@ export default function Navigation() {
     <div className={`fixed w-4/5 m-auto z-50`}>
       <div className={`flex justify-between`}>
         <div className={``}>
-          <Link href={`/#top`}>
+          <Link href={`/`}>
             <h3
               className={`font-john-mayer text-h3 text-uppercase text-text-color cursor-pointer`}
             >
@@ -59,27 +59,27 @@ export default function Navigation() {
           >
             <ul className={`block outline-none`}>
               <li className={navigationLinkStyles}>
-                <Link to={`/`} href={`/`}>
+                <Link href={`/`}>
                   Home
                 </Link>
               </li>
               <li className={navigationLinkStyles}>
-                <Link to={`/`} href={`/#about`}>
+                <Link href={`/#about`}>
                   About
                 </Link>
               </li>
               <li className={navigationLinkStyles}>
-                <Link to={`/`} href={`/schedule`}>
+                <Link href={`/schedule`}>
                   Schedule
                 </Link>
               </li>
               <li className={navigationLinkStyles}>
-                <Link to={`/`} href={`/#location`}>
+                <Link href={`/#location`}>
                   Location
                 </Link>
               </li>
               {/* <li className={navigationLinkStyles}>
-                <Link to={`/`} href={`/#rsvp`}>
+                <Link href={`/`} href={`/#rsvp`}>
                   RSVP
                 </Link>
               </li> */}
@@ -90,27 +90,27 @@ export default function Navigation() {
         <div className={`hidden md:inline`}>
           <ul>
             <li className={navigationLinkStyles}>
-              <Link to={`/`} href={`/`}>
+              <Link href={`/`}>
                 Home
               </Link>
             </li>
             <li className={navigationLinkStyles}>
-              <Link to={`/`} href={`/#about`}>
+              <Link href={`/#about`}>
                 About
               </Link>
             </li>
             <li className={navigationLinkStyles}>
-              <Link to={`/schedule`} href={`/schedule`}>
+              <Link href={`/schedule`}>
                 Schedule
               </Link>
             </li>
             <li className={navigationLinkStyles}>
-              <Link to={`/`} href={`/#location`}>
+              <Link href={`/#location`}>
                 Location
               </Link>
             </li>
             {/* <li className={navigationLinkStyles}>
-              <Link to={`/`} href={`/#rsvp`}>
+              <Link href={`/`} href={`/#rsvp`}>
                 RSVP
               </Link>
             </li> */}

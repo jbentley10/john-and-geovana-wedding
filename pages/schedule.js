@@ -38,7 +38,7 @@ export default function SchedulePage() {
 
         <Schedule />
 
-        <Footer />
+        <Footer showSeeYouThere={false}/>
       </div>
     </>
   );

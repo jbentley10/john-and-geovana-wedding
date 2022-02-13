@@ -53,7 +53,7 @@ export default function Home() {
       <div className={`${pageLayoutStyles}`}>
         <Map />
         {/* <RSVPForm /> */}
-        <Footer />
+        <Footer showSeeYouThere={true}/>
       </div>
     </>
   )

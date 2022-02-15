@@ -46,7 +46,7 @@ export default function Navigation() {
             burgerBarClassName={`md:hidden`}
             crossButtonClassName={`md:hidden`}
             crossClassName={``}
-            menuClassName={`md:hidden`}
+            menuClassName={`w-full md:hidden`}
             morphShapeClassName={``}
             itemListClassName={``}
             overlayClassName={""}
@@ -57,7 +57,7 @@ export default function Navigation() {
               <Image src="/menu-cross.svg" width={50} height={50} />
             }
           >
-            <ul className={`block outline-none`}>
+            <ul className={`flex flex-col text-right outline-none bg-nude-4`}>
               <li className={navigationLinkStyles}>
                 <Link href={`/`}>
                   Home

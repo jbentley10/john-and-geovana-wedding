@@ -113,20 +113,24 @@ export default function Map() {
       </div>
       <div className={`inline md:flex h-full sm:mb-4`}>
         <div className={`w-full md:w-6/12`}>
-          <h2 className={`${h2Styles}`}>Get to know PDX</h2>
+          <h2 className={`${h2Styles} mb-8 border-b-4 border-purple sm:w-full md:w-9/12 xl:w-1/2`}>Get to know PDX</h2>
           <ul>
             <li className="mb-8 list-disc text-purple">
-            <Link href={markers[0].link}><a target="_blank" className={`${h5Styles} text-purple`}>{markers[0].name}</a></Link>
-              <p className={`${paragraphStyles}`}>
+              <Link href={markers[0].link}>
+                <a target="_blank" className={`${h5Styles} text-purple`}>{markers[0].name}</a>
+              </Link>
+              <p className={`${paragraphStyles} pt-4`}>
                 {markers[0].address}
               </p>
             </li>
             <li className="mb-8 list-disc text-purple">
-              <Link href={markers[1].link}><a target="_blank" className={`${h5Styles} text-purple`}>{markers[1].name}</a></Link>
-              <p className={`${paragraphStyles} pb-2`}>
-              {markers[1].address}
+              <Link href={markers[1].link}>
+                <a target="_blank" className={`${h5Styles} text-purple`}>{markers[1].name}</a>
+              </Link>
+              <p className={`${paragraphStyles} pb-2 pt-4`}>
+                {markers[1].address}
               </p>
-              <div className={`w-10/12 md:w-10/12 lg:w-1/2`}>
+              <div className={`md:w-10/12 lg:w-1/2`}>
                 <p className={`${paragraphStyles}`}>
                   The bride and groom have worked with Hotel deLuxe to ensure guests receive a special hotel discount. Use the 
                   link below to book your room with a discount! Alternatively, use the code CELEBRATE at checkout.
@@ -137,9 +141,11 @@ export default function Map() {
               </div>
             </li>
             <li className="mb-8 list-disc text-purple">
-              <Link href={markers[2].link}><a target="_blank" className={`${h5Styles} text-purple`}>{markers[2].name}</a></Link>
-              <p className={`${paragraphStyles}`}>
-              {markers[2].address}
+              <Link href={markers[2].link}>
+                <a target="_blank" className={`${h5Styles} text-purple`}>{markers[2].name}</a>
+              </Link>
+              <p className={`${paragraphStyles} pt-4`}>
+                {markers[2].address}
               </p>
             </li>
           </ul>

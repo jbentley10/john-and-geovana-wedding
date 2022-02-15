@@ -1,6 +1,7 @@
 module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
+  important: true,
   theme: {
     fontFamily: {
       'jost': ['jost'],
@@ -12,6 +13,7 @@ module.exports = {
         'nude-2': '#f2b06f',
         'nude-3': '#efa765',
         'nude-4': '#EEA15F',
+        'nude-4-transparent': 'rgba(161,95,238, .4)',
         'dark-brown': '#ca9157',
         'red': '#C01440',
         'purple': '#A20B5C',
@@ -34,11 +36,11 @@ module.exports = {
         'huge': '5rem',
         'h1': '4rem', // H1 
         'h2': '2.25rem', // H2
-        'h3': '1.75rem', // H3
-        'h4': '1.5rem', // H4
-        'h5': '1.25rem', // H4
+        'h3': '1.85rem', // H3
+        'h4': '1.75rem', // H4
+        'h5': '1.85rem', // H4
         'link': '1.25rem', // nav links
-        'paragraph': '1rem', // Paragraph / Body
+        'paragraph': '1.25rem', // Paragraph / Body
         'footer': '1rem',
         '7xl': '4.5rem',
         '8xl': '6.25rem',

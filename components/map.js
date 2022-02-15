@@ -126,13 +126,15 @@ export default function Map() {
               <p className={`${paragraphStyles} pb-2`}>
               {markers[1].address}
               </p>
-              <p className={`${paragraphStyles} w-1/2`}>
-                The bride and groom have worked with Hotel deLuxe to ensure guests receive a special hotel discount. Use the 
-                link below to book your room with a discount! Alternatively, use the code CELEBRATE at checkout.
-              </p>
-              <Link href={`https://reservations.provenancehotels.com/?chain=21650&hotel=76779&level=chain&dest=ALL&promo=CELEBRATE`}>
-                <a target="_blank" className={`${buttonStyles} block w-1/2 text-center mt-2`}>Book with discount</a>
-              </Link>
+              <div className={`w-10/12 md:w-10/12 lg:w-1/2`}>
+                <p className={`${paragraphStyles}`}>
+                  The bride and groom have worked with Hotel deLuxe to ensure guests receive a special hotel discount. Use the 
+                  link below to book your room with a discount! Alternatively, use the code CELEBRATE at checkout.
+                </p>
+                <Link href={`https://reservations.provenancehotels.com/?chain=21650&hotel=76779&level=chain&dest=ALL&promo=CELEBRATE`}>
+                  <a target="_blank" className={`${buttonStyles} block m-auto text-center mt-2`}>Book with discount</a>
+                </Link>
+              </div>
             </li>
             <li className="mb-8 list-disc text-purple">
               <Link href={markers[2].link}><a target="_blank" className={`${h5Styles} text-purple`}>{markers[2].name}</a></Link>

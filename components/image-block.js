@@ -3,9 +3,45 @@
  */
 // Import dependencies
 import Image from 'next/image';
+import { motion, useAnimation } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
-// Import styles
-import { gradientBG } from '../utils/constants';
+const animationVariants = {
+  visible: { opacity: 1 },
+  hidden: { opacity: 0 },
+}
+
+const FadeInImage = props => {
+  const [loaded, setLoaded] = useState(false);
+  const animationControls = useAnimation();
+
+  useEffect(
+      () => {
+          if(loaded){
+              animationControls.start("visible");
+          }
+      },
+      [loaded]
+  );
+
+  return(
+      <motion.div
+          initial={"hidden"}
+          animate={animationControls}
+          variants={animationVariants}
+          transition={{ ease: "easeOut", duration: 1 }}
+      >
+          <Image
+              src={props.src}
+              layout={props.layout}
+              height={props.height}
+              width={props.width}
+              alt={props.alt}
+              onLoad={() => setLoaded(true)}
+          />
+      </motion.div>
+  );
+}
 
  export default function ImageBlock() {
    return (
@@ -15,9 +51,9 @@ import { gradientBG } from '../utils/constants';
         <div className={`w-5/12`} />
       </div>
       <div className={`flex h-full`}>
-        <div className={`w-5/12`} />
+        <div className={`w-6/12`} />
         <div className={`pr-0 md:pr-10 w-fit md:w-7/12 z-20`}>
-          <Image 
+          <FadeInImage 
             src={`/images/geo-john-look.webp`}
             layout={`intrinsic`}
             height={500}
@@ -28,8 +64,8 @@ import { gradientBG } from '../utils/constants';
       </div>
       <div className={`flex h-full`}>
         <div className={`w-2/12`} />
-        <div className={`w-fit md:w-5/12 -mt-14 z-30 -ml-4 md:ml-4`}>
-          <Image 
+        <div className={`w-fit md:w-6/12 -mt-14 z-30 -ml-4 md:ml-4`}>
+          <FadeInImage 
             src={`/images/geo-ring.webp`}
             layout={`intrinsic`}
             height={500}

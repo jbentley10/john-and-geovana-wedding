@@ -21,9 +21,10 @@ export const h5Styles = 'font-john-mayer text-h5 text-text-color leading-8';
 export const paragraphStyles = 'font-jost text-paragraph text-text-color leading-normal';
 // Links
 export const linkStyles = 'font-jost text-purple text-paragraph font-semibold cursor-pointer hover:text-link-color';
-export const buttonStyles = 'font-jost bg-link-color text-white text-paragraph font-semibold cursor-pointer px-8 py-4 hover:bg-purple';
+export const buttonStyles = 'font-jost bg-link-color text-white text-paragraph font-semibold cursor-pointer px-8 py-4 hover:bg-purple rounded-lg transition ease-in-out';
 export const inputStyles = 'font-jost bg-dark-brown border-0 rounded text-paragraph px-4 py-2 mb-4';
 export const navigationLinkStyles = 'font-jost text-text-color text-paragraph inline px-4';
+export const mobileNavLinkStyles = 'font-jost text-text-color text-4xl inline pr-8 py-6';
 
 // Borders
 export const borderStyles = 'border-solid border-4 border-purple-700';

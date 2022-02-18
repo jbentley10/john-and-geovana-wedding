@@ -41,3 +41,54 @@
   border-radius: 37px;
   background: linear-gradient(45deg, #a20a5b59, #f3b474, transparent);
 }
+
+.mobile-nav-background {
+  background: linear-gradient(rgba(249, 196, 133, 0.2), rgba(238, 161, 95, 1));
+}
+
+.bm-morph-shape {
+  fill: rgb(249, 196, 133);
+}
+
+.bm-menu-wrap {
+  top: 0 !important;
+}
+
+.bm-cross-button {
+  width: 4rem;
+  height: 4rem;
+}
+
+.hero-h1 {
+  animation: fadeInText 2s !important;
+}
+
+.hero-h2 {
+  animation: fadeInText 2.75s !important;
+}
+
+.hero-h3 {
+  animation: fadeInDate 3s !important;
+}
+
+.button-fade {
+  animation: fadeInText 3.75s !important;
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDate {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: .3;
+  }
+}

@@ -2,19 +2,30 @@
  * @file schedule.js
  */
 // Import dependencies
-import { useState } from 'react';
 import Link from 'next/link';
 
 // Import styles
-import { h1Styles, h2Styles, h3Styles, h4Styles, h5Styles, buttonStyles, linkStyles, paragraphStyles, borderStyles } from '../utils/constants';
+import { h1Styles, h3Styles, h4Styles, linkStyles, paragraphStyles, borderStyles } from '../utils/constants';
 
 export default function Schedule() {
-  const [currentDay, setCurrentDay] = useState('Fri');
 
   // Schedule content for each day
   const ThursdayContent = () => {
     return (
-      <h2 className={`${h2Styles}`}>To be announced...</h2>
+      <div className={`my-14`}>
+        <div className={'inline'}>
+          <h3 className={`${h3Styles} w-full sm:w-7/12 md:w-full lg:w-9/12 xl:w-6/12 mb-2 border-b-4 border-purple`}>Thursday, July 28, 2022</h3>
+          <h4 className={`${h4Styles}`}>5:30pm - Welcome Event</h4>
+          <Link target={`blank`} href={`https://www.19thholepdx.com/`}><a className={`${linkStyles} text-text-color`}>The 19th Hole</a></Link>
+          <p className={`${paragraphStyles} text-text-color`}>795 SW 15th Ave</p>
+          <p className={`${paragraphStyles} text-text-color`}>Portland, OR 97205</p>
+          <br />
+          <p className={`${paragraphStyles} text-text-color`}>
+            Join us for some food and drinks together, right across
+            the street from Hotel deLuxe.
+          </p>
+        </div>
+      </div>
     )
   }
 
@@ -22,96 +33,23 @@ export default function Schedule() {
     return (
       <div>
         <div className={'inline'}>
-          <h3 className={`${h3Styles}`}>Ceremony</h3>
-          <h4 className={`${h4Styles} text-text-color`}>Tentative start time of 3:30pm. Details to be announced!</h4>
+          <h3 className={`${h3Styles} w-full sm:w-7/12 md:w-full lg:w-9/12 xl:w-6/12 mb-2 border-b-4 border-purple`}>Friday, July 29, 2022</h3>
+          <h4 className={`${h4Styles}`}>3:30pm - Ceremony</h4>
+          <p className={`${paragraphStyles} text-text-color`}>Tentative start time of 3:30pm. Details to be announced!</p>
         </div>
-        {/* <div className={'inline'}>
-          <h3 className={`${h3Styles}`}>Ceremony</h3>
-          <h4 className={`${h4Styles} text-text-color`}>3:30pm-4pm</h4>          
-          <p className={`${paragraphStyles}`}>Castaway Portland</p>
-          <p className={`${paragraphStyles}`}>1900 NW 18th Ave</p>
-          <p className={`${paragraphStyles}`}>Portland, OR 97209</p>
-          <Link href="https://goo.gl/maps/Y3Ln4edF7SrdfsNfA">
-            <button className={`${buttonStyles} block mt-4 mb-8`}>
-              Map
-            </button>
-          </Link>
-        </div>
-        
-
-        <div className={'inline'}>
-          <h3 className={`${h3Styles}`}>Cocktail Hour</h3>
-          <h4 className={`${h4Styles} text-text-color`}>4:30pm-5:30p</h4>
-          <p className={`${paragraphStyles}`}>Castaway Portland</p>
-          <p className={`${paragraphStyles}`}>1900 NW 18th Ave</p>
-          <p className={`${paragraphStyles}`}>Portland, OR 97209</p>
-          <Link href="https://goo.gl/maps/Y3Ln4edF7SrdfsNfA">
-            <button className={`${buttonStyles} block mt-4 mb-8`}>
-              Map
-            </button>
-          </Link>
-        </div>
-        
-
-        <div className={'inline'}>
-          <h3 className={`${h3Styles}`}>Reception</h3>
-          <h4 className={`${h4Styles} text-text-color`}>5:30pm-11p</h4>
-          <p className={`${paragraphStyles}`}>Castaway Portland</p>
-          <p className={`${paragraphStyles}`}>1900 NW 18th Ave</p>
-          <p className={`${paragraphStyles}`}>Portland, OR 97209</p>
-          <Link href="https://goo.gl/maps/Y3Ln4edF7SrdfsNfA">
-            <button className={`${buttonStyles} block mt-4 mb-8`}>
-              Map
-            </button>
-          </Link>
-        </div> */}
-        
       </div>
     )
   }
 
-  const SaturdayContent = () => {
-    return (
-      <h2 className={`${h2Styles}`}>To be announced...</h2>
-    )
-  }
-
-  const handleSetDay = (day) => {
-    switch(day) {
-      case 'Thu':
-        setCurrentDay("Thu");
-        break;
-
-      case 'Fri':
-        setCurrentDay("Fri");
-        break;
-
-      case 'Sat':
-        setCurrentDay("Sat");
-        break;
-
-      default: 
-        break;
-    }
-  }
-
   return (
-    <div className="pt-24 pb-48 md:pt-48" id="schedule">
+    <div className="pt-24 md:pt-48" id="schedule">
       <div className={`w-full md:w-1/2 pt-8 m-auto`}>
-        <h1 className={`${h1Styles}`}>Schedule</h1>
+        <h1 className={`${h1Styles} mb-1`}>Schedule</h1>
 
-        <div className={`pt-2 pl-12`}>
-          <ul className={`hidden`}>
-            <li className={`p-6`}><a className={`mr-3 lg:mr-32 p-5 ${linkStyles} ${currentDay == 'Thu' && borderStyles}`} onClick={() => handleSetDay('Thu')}>Thu</a></li>
-            <li className={`p-6`}><a className={`mr-3 lg:mr-32 p-5 ${linkStyles} ${currentDay == 'Fri' && borderStyles}`} onClick={() => handleSetDay('Fri')}>Fri</a></li>
-            <li className={`p-6`}><a className={`mr-3 lg:mr-32 p-5 ${linkStyles} ${currentDay == 'Sat' && borderStyles}`} onClick={() => handleSetDay('Sat')}>Sat</a></li>
-          </ul>
-
+        <div className={`pt-2`}>
           <div className={`schedule-content`}>
-            <h2 className={`${h2Styles}`}>Friday, July 29, 2022</h2>
-            { currentDay == 'Thu' && <ThursdayContent /> }
-            { currentDay == 'Fri' && <FridayContent /> }
-            { currentDay == 'Sat' && <SaturdayContent /> }
+            <ThursdayContent />
+            <FridayContent />
           </div>
         </div>
         

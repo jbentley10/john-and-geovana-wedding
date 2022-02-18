@@ -107,15 +107,38 @@ export default function Map() {
 
   return (
     <div id="location">
-      <div className={`flex h-12 md:h-48`}>
-        <div className={`border-center w-8/12`} />
-        <div className={`w-5/12`} />
-      </div>
       <div className={`inline md:flex h-full sm:mb-4`}>
         <div className={`w-full md:w-6/12`}>
-          <h2 className={`${h2Styles} mb-8 border-b-4 border-purple sm:w-full md:w-9/12 xl:w-1/2`}>Get to know PDX</h2>
+        <h2 className={`${h2Styles} mb-8 border-b-4 border-purple sm:w-full md:w-9/12 xl:w-1/2`}>Hotels</h2>
           <ul>
-            <li className="mb-8 list-disc text-purple">
+            <li className="mb-8 list-disc text-purple ml-8">
+              <Link href={markers[1].link}>
+                <a target="_blank" className={`${h5Styles} text-purple`}>{markers[1].name}</a>
+              </Link>
+              <p className={`${paragraphStyles} pb-2 pt-4`}>
+                {markers[1].address}
+              </p>
+              <div className={`md:w-10/12 lg:w-8/12`}>
+                <p className={`${paragraphStyles}`}>
+                  The bride and groom have worked with Hotel deLuxe to ensure guests receive a special hotel discount. Use the 
+                  link below to book your room with a discount! Alternatively, use the code CELEBRATE at checkout.
+                </p>
+                <p className={`${paragraphStyles} mt-4`}>
+                  <strong>Recommended for:</strong>
+                  <ul>
+                    <li className={`list-disc ml-8`}>Those who wish to be close to the Welcome Event</li>
+                    <li className={`list-disc ml-8`}>Folks who need accommodations near the bride and groom</li>
+                  </ul>
+                </p>
+                <Link href={`https://reservations.provenancehotels.com/?chain=21650&hotel=76779&level=chain&dest=ALL&promo=CELEBRATE`}>
+                  <a target="_blank" className={`${buttonStyles} block m-auto text-center mt-2`}>Book with discount</a>
+                </Link>
+              </div>
+            </li>
+          </ul>
+          <h2 className={`${h2Styles} mb-8 border-b-4 border-purple sm:w-full md:w-11/12 xl:w-1/2`}>Venues & Event Spaces</h2>
+          <ul>
+            <li className="mb-8 list-disc text-purple ml-8">
               <Link href={markers[0].link}>
                 <a target="_blank" className={`${h5Styles} text-purple`}>{markers[0].name}</a>
               </Link>
@@ -123,24 +146,10 @@ export default function Map() {
                 {markers[0].address}
               </p>
             </li>
-            <li className="mb-8 list-disc text-purple">
-              <Link href={markers[1].link}>
-                <a target="_blank" className={`${h5Styles} text-purple`}>{markers[1].name}</a>
-              </Link>
-              <p className={`${paragraphStyles} pb-2 pt-4`}>
-                {markers[1].address}
-              </p>
-              <div className={`md:w-10/12 lg:w-1/2`}>
-                <p className={`${paragraphStyles}`}>
-                  The bride and groom have worked with Hotel deLuxe to ensure guests receive a special hotel discount. Use the 
-                  link below to book your room with a discount! Alternatively, use the code CELEBRATE at checkout.
-                </p>
-                <Link href={`https://reservations.provenancehotels.com/?chain=21650&hotel=76779&level=chain&dest=ALL&promo=CELEBRATE`}>
-                  <a target="_blank" className={`${buttonStyles} block m-auto text-center mt-2`}>Book with discount</a>
-                </Link>
-              </div>
-            </li>
-            <li className="mb-8 list-disc text-purple">
+          </ul>
+          <h2 className={`${h2Styles} mb-8 border-b-4 border-purple sm:w-full md:w-9/12 xl:w-1/2`}>Airport</h2>
+          <ul>
+            <li className="mb-8 list-disc text-purple ml-8">
               <Link href={markers[2].link}>
                 <a target="_blank" className={`${h5Styles} text-purple`}>{markers[2].name}</a>
               </Link>
@@ -160,10 +169,6 @@ export default function Map() {
             />
           </div>
         </div>
-      </div>
-      <div className={`flex md:h-64`}>
-        <div className={`border-center w-7/12`} />
-        <div className={`w-5/12`} />
       </div>
 
       <style jsx={true}>{`

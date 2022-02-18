@@ -61,7 +61,7 @@ export default function Navigation() {
           >
             <ul className={`pt-24 mobile-nav-background bg-gradient-to-r from-nav-stop-1 to-nav-stop-2 h-screen flex flex-col text-right outline-none bg-nude-4`}>
               <li className={mobileNavLinkStyles}>
-                <Link onClick={handleOnMenuStateChange} href={`/`}>
+                <Link href={`/`}>
                   Home
                 </Link>
               </li>

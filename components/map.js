@@ -41,7 +41,21 @@ export default function Map() {
         "lng": -122.5972829,
         "link": "https://goo.gl/maps/N4zJanFxJRHB3iUp9",
         "address": "7000 NE Airport Way, Portland, OR 97218"
-    }
+    },
+    {
+        "name": "Dossier Hotel",
+        "lat": 45.5201004,
+        "lng": -122.6821866,
+        "link": "https://g.page/dossier-hotel?share",
+        "address": "708 SW Alder St, Portland, OR 97205"
+    },
+    {
+      "name": "Holiday Inn Express & Suites",
+      "lat": 45.537281,
+      "lng": -122.7051261,
+      "link": "https://g.page/HIXNWPortland?share",
+      "address": "2333 NW Vaughn St, Portland, OR 97210"
+  }
   ];
   const [selectedMarker, setSelectedMarker] = useState(null);
 
@@ -85,6 +99,28 @@ export default function Map() {
             scaledSize: new window.google.maps.Size(35, 35)
           }}
         />
+        <Marker 
+          position={{ lat: markers[3].lat, lng: markers[3].lng }} 
+          onClick={() => {
+            setSelectedMarker(markers[3]);
+            console.log(markers[3].name);
+          }}
+          icon={{
+            url: '/images/hotel.svg',
+            scaledSize: new window.google.maps.Size(35, 35)
+          }}
+        />
+        <Marker 
+          position={{ lat: markers[4].lat, lng: markers[4].lng }} 
+          onClick={() => {
+            setSelectedMarker(markers[4]);
+            console.log(markers[4].name);
+          }}
+          icon={{
+            url: '/images/hotel.svg',
+            scaledSize: new window.google.maps.Size(35, 35)
+          }}
+        />
         { selectedMarker && (
           <InfoWindow
             position={{
@@ -111,7 +147,7 @@ export default function Map() {
         <div className={`w-full md:w-6/12`}>
         <h2 className={`${h2Styles} mb-8 border-b-4 border-purple sm:w-full md:w-9/12 xl:w-1/2`}>Hotels</h2>
           <ul>
-            <li className="mb-8 list-disc text-purple ml-8">
+            <li className="mb-8 list-disc text-purple ml-8 mb-24">
               <Link href={markers[1].link}>
                 <a target="_blank" className={`${h5Styles} text-purple`}>{markers[1].name}</a>
               </Link>
@@ -135,10 +171,52 @@ export default function Map() {
                 </Link>
               </div>
             </li>
+
+            <li className="mb-8 list-disc text-purple ml-8 my-24">
+              <Link href={markers[3].link}>
+                <a target="_blank" className={`${h5Styles} text-purple`}>{markers[3].name}</a>
+              </Link>
+              <p className={`${paragraphStyles} pb-2 pt-4`}>
+                {markers[3].address}
+              </p>
+              <div className={`md:w-10/12 lg:w-8/12`}>
+                <p className={`${paragraphStyles}`}>
+                  Use the link below to book your room with a discount!
+                </p>
+                <p className={`${paragraphStyles} mt-4`}>
+                  <strong>Recommended for:</strong>
+                  <ul>
+                    <li className={`list-disc ml-8`}>Those who wish to be close to the Welcome Event</li>
+                    <li className={`list-disc ml-8`}>Folks who would like a more modern hotel experience</li>
+                  </ul>
+                </p>
+                <Link href={`https://reservations.provenancehotels.com/?chain=21650&hotel=76814&level=chain&dest=ALL&promo=CELEBRATE`}>
+                  <a target="_blank" className={`${buttonStyles} block m-auto text-center mt-2`}>Book with discount</a>
+                </Link>
+              </div>
+            </li>            
+
+            <li className="mb-8 list-disc text-purple ml-8 my-24">
+              <Link href={markers[4].link}>
+                <a target="_blank" className={`${h5Styles} text-purple`}>{markers[4].name}</a>
+              </Link>
+              <p className={`${paragraphStyles} pb-2 pt-4`}>
+                {markers[4].address}
+              </p>
+              <div className={`md:w-10/12 lg:w-8/12`}>
+                <p className={`${paragraphStyles} mt-4`}>
+                  <strong>Recommended for:</strong>
+                  <ul>
+                    <li className={`list-disc ml-8`}>Those who wish to be close to the wedding venue</li>
+                    <li className={`list-disc ml-8`}>Folks who are bringing cars and would like free parking</li>
+                  </ul>
+                </p>
+              </div>
+            </li>
           </ul>
-          <h2 className={`${h2Styles} mb-8 border-b-4 border-purple sm:w-full md:w-11/12 xl:w-1/2`}>Venues & Event Spaces</h2>
+          <h2 className={`${h2Styles} mb-8 border-b-4 border-purple sm:w-full md:w-11/12 xl:w-1/2 mt-24`}>Venues & Event Spaces</h2>
           <ul>
-            <li className="mb-8 list-disc text-purple ml-8">
+            <li className="mb-8 list-disc text-purple ml-8 mb-24">
               <Link href={markers[0].link}>
                 <a target="_blank" className={`${h5Styles} text-purple`}>{markers[0].name}</a>
               </Link>
@@ -149,7 +227,7 @@ export default function Map() {
           </ul>
           <h2 className={`${h2Styles} mb-8 border-b-4 border-purple sm:w-full md:w-9/12 xl:w-1/2`}>Airport</h2>
           <ul>
-            <li className="mb-8 list-disc text-purple ml-8">
+            <li className="mb-8 list-disc text-purple ml-8 mb-24">
               <Link href={markers[2].link}>
                 <a target="_blank" className={`${h5Styles} text-purple`}>{markers[2].name}</a>
               </Link>

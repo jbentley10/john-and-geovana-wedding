@@ -17,9 +17,6 @@ export default function Hero () {
       <div className={`text-center md:text-right bottom-24 relative`}>
         <h1 className={`hero-h3 ${heroStyles} opacity-30 cursor-default`}>7.29.2022</h1>
       </div>
-      <div className={`button-fade text-center relative mb-24`}>
-        <Link href={`#location`}><a className={buttonStyles}>Get hotel information</a></Link>
-      </div>
 
       <style jsx>{`
        

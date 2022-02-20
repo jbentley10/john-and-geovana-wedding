@@ -2,12 +2,14 @@
  * @file hero.js
  */
 // Import dependencies
-import Link from 'next/link';
+import Image from 'next/image';
 
 // Import styles
 import { heroStyles, h2Styles, buttonStyles } from '../utils/constants';
+import { useEffect } from 'react';
 
 export default function Hero () {
+
   return (
     <div id={`top`} className={`h-3/4`}>
       <div className={`text-center pt-24 pb-48 md:pt-48`}>

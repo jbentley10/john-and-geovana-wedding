@@ -143,9 +143,9 @@ export default function Map() {
 
   return (
     <div id="location">
-      <div className={`inline md:flex h-full sm:mb-4`}>
+      <div className={`h-full sm:mb-4 block md:flex md:flex-col`}>
         <div className={`w-full md:w-6/12`}>
-        <h2 className={`${h2Styles} mb-8 border-b-4 border-purple sm:w-full md:w-9/12 xl:w-1/2`}>Hotels</h2>
+          <h2 className={`${h2Styles} mb-8 border-b-4 border-purple sm:w-full md:w-9/12 xl:w-1/2`}>Hotels</h2>
           <ul>
             <li className="mb-8 list-disc text-purple ml-8 mb-24">
               <Link href={markers[1].link}>
@@ -237,8 +237,8 @@ export default function Map() {
             </li>
           </ul>
         </div>
-        <div className={`w-full md:w-6/12 z-20`}>
-          <div style={{ height: "50vh", width: "100%" }}>
+        <div className={`w-full md:w-6/12 block md:fixed md:right-0 z-20`}>
+          <div className={`map-container w-full md:w-10/12`} style={{ height: "50vh" }}>
             <MyMapComponent
               googleMapURL={'https://maps.googleapis.com/maps/api/js?key=AIzaSyAmO1McaQgHA3FLjboz6l2UYqOyYTeAtfo&libraries=geometry,drawing,places'}
               loadingElement={<div style={{ height: `100%` }} />}

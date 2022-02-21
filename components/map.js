@@ -22,7 +22,7 @@ export default function Map() {
   const GOOGLE_MAPS_API = process.env.GOOGLE_MAPS_API;
   const markers = [
     {
-        "name": "Castaway Portland (Ceremony + Reception)",
+        "name": "Castaway Portland",
         "lat": 45.5365861,
         "lng": -122.6916165,
         "link": "https://goo.gl/maps/Y3Ln4edF7SrdfsNfA",
@@ -214,7 +214,7 @@ export default function Map() {
               </div>
             </li>
           </ul>
-          <h2 className={`${h2Styles} mb-8 border-b-4 border-purple sm:w-full md:w-11/12 xl:w-1/2 mt-24`}>Venues & Event Spaces</h2>
+          <h2 className={`${h2Styles} mb-8 border-b-4 border-purple sm:w-full md:w-11/12 xl:w-1/2 mt-24`}>Ceremony & Reception</h2>
           <ul>
             <li className="mb-8 list-disc text-purple ml-8 mb-24">
               <Link href={markers[0].link}>

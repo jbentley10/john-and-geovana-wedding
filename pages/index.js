@@ -1,6 +1,7 @@
 // Import dependencies
 import { useEffect } from 'react';
 import Head from 'next/head';
+import Image from 'next/image';
 import TagManager from 'react-gtm-module';
 
 // Import components
@@ -9,8 +10,6 @@ import Navigation from '../components/navigation';
 import LeftRightText from '../components/left-right-text';
 import BorderLeft from '../components/border-left';
 import ImageBlock from '../components/image-block';
-import Schedule from '../components/schedule';
-import Map from '../components/map';
 import Footer from '../components/footer';
 import RSVPForm from "../components/rsvp-form";
 
@@ -20,6 +19,14 @@ import { pageLayoutStyles } from '../utils/constants';
 export default function Home() {
   useEffect(() => {
     TagManager.initialize({ gtmId: 'GTM-M9ZGKXX' });
+
+    let circle = document.getElementById('circle');
+    const onMouseMove = (e) =>{
+      circle.style.left = (e.pageX / 2) + 'px';
+      circle.style.top = (e.pageY / 2) + 'px';
+      console.log("mouse position: " + e.pageX);
+    }
+    document.addEventListener('mousemove', onMouseMove);
   }, []);
 
   return (
@@ -42,19 +49,28 @@ export default function Home() {
         
         <Hero/>
 
+        <div id={`circle`}>
+          <Image 
+            src={`/images/blur-circle--purple.png`}
+            layout={`intrinsic`}
+            height={550}
+            width={550}
+            alt={`Blurred circle`}
+          />
+        </div>
+
+        <BorderLeft />
+
+        <ImageBlock />
+
         <LeftRightText />
       </div>
 
-      <BorderLeft />
-
-      <ImageBlock />
-
-      {/* <Schedule /> */}
+      
 
       <div className={`${pageLayoutStyles}`}>
-        <Map />
         {/* <RSVPForm /> */}
-        <Footer />
+        <Footer showSeeYouThere={true}/>
       </div>
     </>
   )

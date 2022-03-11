@@ -1,87 +1,60 @@
 /**
  * @file schedule.js
  */
+// Import dependencies
+import Link from 'next/link';
+
 // Import styles
-import { useState } from 'react';
-import { h2Styles, linkStyles, borderStyles } from '../utils/constants';
+import { h1Styles, h3Styles, h4Styles, linkStyles, paragraphStyles, borderStyles } from '../utils/constants';
 
 export default function Schedule() {
-  const [currentDay, setCurrentDay] = useState('Thu');
 
   // Schedule content for each day
   const ThursdayContent = () => {
     return (
-      <p>The wedding party is invited to join us for our reception rehearsal, followed
-        by dinner.
-      </p>
+      <div className={`my-14`}>
+        <div className={'inline'}>
+          <h3 className={`${h3Styles} w-full sm:w-7/12 md:w-full lg:w-9/12 xl:w-6/12 mb-2 border-b-4 border-purple`}>Thursday, July 28, 2022</h3>
+          <h4 className={`${h4Styles}`}>5:30pm - Welcome Event</h4>
+          <Link target={`blank`} href={`https://www.19thholepdx.com/`}><a className={`${linkStyles} text-text-color`}>The 19th Hole</a></Link>
+          <p className={`${paragraphStyles} text-text-color`}>795 SW 15th Ave</p>
+          <p className={`${paragraphStyles} text-text-color`}>Portland, OR 97205</p>
+          <br />
+          <p className={`${paragraphStyles} text-text-color`}>
+            Join us for some food and drinks together, right across
+            the street from Hotel deLuxe.
+          </p>
+        </div>
+      </div>
     )
   }
 
   const FridayContent = () => {
     return (
-      <p>Wedding ceremony and reception!</p>
+      <div>
+        <div className={'inline'}>
+          <h3 className={`${h3Styles} w-full sm:w-7/12 md:w-full lg:w-9/12 xl:w-6/12 mb-2 border-b-4 border-purple`}>Friday, July 29, 2022</h3>
+          <h4 className={`${h4Styles}`}>3:30pm - Ceremony</h4>
+          <p className={`${paragraphStyles} text-text-color`}>Tentative start time of 3:30pm. Details to be announced!</p>
+        </div>
+      </div>
     )
-  }
-
-  const SaturdayContent = () => {
-    return (
-      <p>To be announced...</p>
-    )
-  }
-
-  const handleSetDay = (day) => {
-    switch(day) {
-      case 'Thu':
-        setCurrentDay("Thu");
-        break;
-
-      case 'Fri':
-        setCurrentDay("Fri");
-        break;
-
-      case 'Sat':
-        setCurrentDay("Sat");
-        break;
-
-      default: 
-        break;
-    }
   }
 
   return (
-    <>
-      <div className={`flex h-full`}>
-        <div className={`w-8/12 bg-gradient-to-r from-nude-1 to-nude-2`} />
-        
-        <div className={`w-2/12 bg-gradient-to-r from-nude-2 to-nude-3 border-right`}>
-          <div className={`py-32 -ml-96`}>
-            <h2 className={`${h2Styles}`}>Schedule</h2>
+    <div className="pt-24 md:pt-48" id="schedule">
+      <div className={`w-full md:w-1/2 pt-8 m-auto`}>
+        <h1 className={`${h1Styles} mb-1`}>Schedule</h1>
 
-            <div className={`pt-16 pl-12`}>
-              <ul className={`flex`}>
-                <li className={`p-6`}><a className={`mr-32 p-5 ${linkStyles} ${currentDay == 'Thu' && borderStyles}`} onClick={() => handleSetDay('Thu')}>Thu</a></li>
-                <li className={`p-6`}><a className={`mr-32 p-5 ${linkStyles} ${currentDay == 'Fri' && borderStyles}`} onClick={() => handleSetDay('Fri')}>Fri</a></li>
-                <li className={`p-6`}><a className={`mr-32 p-5 ${linkStyles} ${currentDay == 'Sat' && borderStyles}`} onClick={() => handleSetDay('Sat')}>Sat</a></li>
-              </ul>
-
-              <div className={`schedule-content`}>
-                { currentDay == 'Thu' && <ThursdayContent /> }
-                { currentDay == 'Fri' && <FridayContent /> }
-                { currentDay == 'Sat' && <SaturdayContent /> }
-              </div>
-            </div>
+        <div className={`pt-2`}>
+          <div className={`schedule-content`}>
+            <ThursdayContent />
+            <FridayContent />
           </div>
         </div>
-
-        <div className={`w-2/12 bg-gradient-to-r from-nude-3 to-nude-4`} />
         
       </div>
 
-      <div className={`hidden md:flex`}>
-        <div className={`w-7/12 bg-gradient-to-r from-nude-1 to-nude-2`} />
-        <div className={`w-3/12 border-bottom--right`} />
-        <div className={`w-2/12 bg-gradient-to-r from-nude-3 to-nude-4`} />
-      </div>
 
       <style jsx={true}>{`
         @media screen and (min-width: 768px) {
@@ -95,6 +68,6 @@ export default function Schedule() {
           }
         }
       `}</style>
-    </>
+    </div>
   )
 }

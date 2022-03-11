@@ -8,7 +8,7 @@ import { BLOCKS, INLINES, MARKS } from "@contentful/rich-text-types";
 export const gradientBG = 'bg-gradient-to-r from-nude-1 to-nude-4';
 
 // Containers
-export const pageLayoutStyles = `p-10 md:py-8 md:px-32 ${gradientBG}`;
+export const pageLayoutStyles = `px-10 py-2 md:p-10 md:py-8 md:px-32 ${gradientBG}`;
 
 // Text
 // Regular
@@ -17,14 +17,15 @@ export const h1Styles = 'font-john-mayer text-h1 text-text-color leading-snug';
 export const h2Styles = 'font-john-mayer text-h2 text-text-color leading-13';
 export const h3Styles = 'font-john-mayer text-h3 text-text-color leading-13';
 export const h4Styles = 'font-john-mayer text-h4 text-text-color leading-13';
-export const h5Styles = 'font-john-mayer text-h5 text-text-color leading-10';
+export const h5Styles = 'font-john-mayer text-h5 text-text-color leading-8';
 export const paragraphStyles = 'font-jost text-paragraph text-text-color leading-normal';
 export const labelStyles = 'font-jost text-paragraph text-text-color leading-normal pb-2';
 // Links
 export const linkStyles = 'font-jost text-purple text-paragraph font-semibold cursor-pointer hover:text-link-color';
-export const buttonStyles = 'font-jost bg-link-color text-white text-paragraph font-semibold cursor-pointer px-8 py-4 hover:bg-purple';
-export const inputStyles = 'shadow-sm font-jost bg-dark-brown border-0 rounded text-paragraph pl-4 pr-12 py-2 mb-6';
-export const navigationLinkStyles = 'font-jost text-text-color text-paragraph inline px-4';
+export const buttonStyles = 'font-jost bg-link-color text-white text-paragraph font-semibold cursor-pointer px-8 py-4 hover:bg-purple rounded-lg transition ease-in-out';
+export const inputStyles = 'font-jost bg-dark-brown border-0 rounded text-paragraph px-4 py-2 mb-4';
+export const navigationLinkStyles = 'font-jost text-text-color text-paragraph inline px-4 hover:text-link-color';
+export const mobileNavLinkStyles = 'font-jost text-text-color text-4xl inline pr-8 py-6';
 
 // Borders
 export const borderStyles = 'border-solid border-4 border-purple-700';

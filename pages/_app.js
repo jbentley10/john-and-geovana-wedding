@@ -4,7 +4,6 @@
 
 // Import dependencies
 import React, { useEffect } from 'react';
-import App, { Container } from 'next/app';
 import TagManager from "react-gtm-module"
 
 // Import styles

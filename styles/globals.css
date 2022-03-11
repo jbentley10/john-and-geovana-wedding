@@ -35,7 +35,78 @@
   font-weight: 500;
 }
 
-input::placeholder, textarea::placeholder {
-  color: #333333;
-  opacity: .5;
+.mobile-nav-background {
+  background: linear-gradient(rgba(249, 196, 133, 0.2), rgba(238, 161, 95, 1));
+}
+
+.bm-morph-shape {
+  fill: rgb(249, 196, 133);
+}
+
+.bm-menu-wrap {
+  top: 0 !important;
+}
+
+.bm-cross-button {
+  width: 4rem;
+  height: 4rem;
+}
+
+.hero-h1 {
+  animation: fadeInText 1.5s !important;
+}
+
+.hero-h2 {
+  animation: fadeInText 2s !important;
+}
+
+.hero-h3 {
+  animation: fadeInDate 3s !important;
+}
+
+.button-fade {
+  animation: fadeInText 3.75s !important;
+}
+
+.map-container {
+  box-shadow: 0px 8px 30px #7c177b;
+}
+
+#circle {
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  opacity: .3;
+  animation: fadeInCircle 4s !important;
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform:translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform:translateY(0);
+  }
+}
+
+@keyframes fadeInDate {
+  from {
+    opacity: 0;
+    transform:translateY(20px);
+  }
+  to {
+    opacity: .3;
+    transform:translateY(0);
+  }
+}
+
+@keyframes fadeInCircle {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: .3;
+  }
 }

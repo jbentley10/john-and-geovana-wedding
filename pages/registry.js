@@ -35,17 +35,20 @@ export default function Registry() {
 
         <Navigation />
 
-        <div>
-          <h1 className={`${h1Styles}`}>Registry</h1>
-          <p className={`${paragraphStyles}`}>
-            In lieu of a traditional wedding registry through one company, here
-            is a list of stores where we would appreciate gift cards from!
-          </p>
-          <ul>
-            <li className={`${paragraphStyles}`}>Store 1</li>
-            <li className={`${paragraphStyles}`}>Store 2</li>
-            <li className={`${paragraphStyles}`}>Store 3</li>
-          </ul>
+        <div className="pt-12 md:pt-24" id="registry">
+          <div className={`w-full pt-8 m-auto`}>
+            <h1 className={`${h1Styles} md:mb-12`}>Registry</h1>
+            <p className={`${paragraphStyles}`}>
+              In lieu of a traditional wedding registry through one company,
+              here is a list of stores where we would appreciate gift cards
+              from!
+            </p>
+            <ul>
+              <li className={`${paragraphStyles}`}>Store 1</li>
+              <li className={`${paragraphStyles}`}>Store 2</li>
+              <li className={`${paragraphStyles}`}>Store 3</li>
+            </ul>
+          </div>
         </div>
 
         <Footer />

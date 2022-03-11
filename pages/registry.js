@@ -6,7 +6,6 @@
 import Head from "next/head";
 
 // Import components
-import Hero from "../components/hero";
 import Navigation from "../components/navigation";
 import Footer from "../components/footer";
 

@@ -1,47 +1,8 @@
 /**
  * @file image-block.js
  */
-// Import dependencies
-import Image from 'next/image';
-import { motion, useAnimation } from 'framer-motion';
-import { useState, useEffect } from 'react';
-
-const animationVariants = {
-  visible: { opacity: 1 },
-  hidden: { opacity: 0 },
-}
-
-const FadeInImage = props => {
-  const [loaded, setLoaded] = useState(false);
-  const animationControls = useAnimation();
-
-  useEffect(
-      () => {
-          if(loaded){
-              animationControls.start("visible");
-          }
-      },
-      [loaded]
-  );
-
-  return(
-      <motion.div
-          initial={"hidden"}
-          animate={animationControls}
-          variants={animationVariants}
-          transition={{ ease: "easeOut", duration: 1 }}
-      >
-          <Image
-              src={props.src}
-              layout={props.layout}
-              height={props.height}
-              width={props.width}
-              alt={props.alt}
-              onLoad={() => setLoaded(true)}
-          />
-      </motion.div>
-  );
-}
+// Import components
+import FadeInImage from "./fade-in-image";
 
  export default function ImageBlock() {
    return (

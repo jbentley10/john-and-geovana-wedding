@@ -15,6 +15,7 @@ import RSVPForm from "../components/rsvp-form";
 
 // Import styles
 import { pageLayoutStyles } from "../utils/constants";
+import FadeInImage from "../components/fade-in-image";
 
 export default function Home() {
   useEffect(() => {
@@ -74,7 +75,7 @@ export default function Home() {
       <div className={`${pageLayoutStyles}`}>
         {/* <RSVPForm /> */}
         <div className={`text-center`}>
-          <Image
+          <FadeInImage
             src={`/images/peaches.webp`}
             layout={`intrinsic`}
             height={667}

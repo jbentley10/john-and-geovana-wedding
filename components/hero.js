@@ -1,12 +1,9 @@
 /**
  * @file hero.js
  */
-// Import dependencies
-import Image from 'next/image';
 
 // Import styles
-import { heroStyles, h2Styles, buttonStyles } from '../utils/constants';
-import { useEffect } from 'react';
+import { heroStyles, h2Styles} from '../utils/constants';
 
 export default function Hero () {
 

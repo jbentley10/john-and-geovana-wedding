@@ -56,6 +56,7 @@ export default function Home() {
             height={550}
             width={550}
             alt={`Blurred circle`}
+            loading={`lazy`}
           />
         </div>
 

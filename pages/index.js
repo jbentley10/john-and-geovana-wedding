@@ -73,15 +73,17 @@ export default function Home() {
 
       <div className={`${pageLayoutStyles}`}>
         {/* <RSVPForm /> */}
-        <Image
-          src={`/images/peaches.webp`}
-          layout={`intrinsic`}
-          height={667}
-          width={1000}
-          alt={`Peaches standing in grass looking at the camera.`}
-          loading={'lazy'}
-          lazyBoundary={400}
-        />
+        <div className={`text-center`}>
+          <Image
+            src={`/images/peaches.webp`}
+            layout={`intrinsic`}
+            height={667}
+            width={1000}
+            alt={`Peaches standing in grass looking at the camera.`}
+            loading={'lazy'}
+            lazyBoundary={400}
+          />
+        </div>
         <Footer showSeeYouThere={true} />
       </div>
     </>

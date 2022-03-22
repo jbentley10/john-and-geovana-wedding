@@ -34,7 +34,7 @@ export default function LocationPage() {
 
         <Navigation />
 
-        <div className="pt-12 md:pt-24" id="schedule">
+        <div className="pt-12 md:pt-24" id="location">
             <div className={`w-full pt-8 m-auto`}>
                 <h1 className={`${h1Styles} md:mb-12`}>Location</h1>
                 <Map />

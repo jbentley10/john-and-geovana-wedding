@@ -19,6 +19,7 @@ export const h3Styles = 'font-john-mayer text-h3 text-text-color leading-13';
 export const h4Styles = 'font-john-mayer text-h4 text-text-color leading-13';
 export const h5Styles = 'font-john-mayer text-h5 text-text-color leading-8';
 export const paragraphStyles = 'font-jost text-paragraph text-text-color leading-normal';
+export const labelStyles = 'font-jost text-paragraph text-text-color leading-normal pb-2';
 // Links
 export const linkStyles = 'font-jost text-purple text-paragraph font-semibold cursor-pointer hover:text-link-color';
 export const buttonStyles = 'font-jost bg-link-color text-white text-paragraph font-semibold cursor-pointer px-8 py-4 hover:bg-purple rounded-lg transition ease-in-out';

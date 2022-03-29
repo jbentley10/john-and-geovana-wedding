@@ -34,8 +34,11 @@ export default function Schedule() {
       <div>
         <div className={'inline'}>
           <h3 className={`${h3Styles} w-full sm:w-7/12 md:w-full lg:w-9/12 xl:w-6/12 mb-2 border-b-4 border-purple`}>Friday, July 29, 2022</h3>
-          <h4 className={`${h4Styles}`}>3:30pm - Ceremony</h4>
-          <p className={`${paragraphStyles} text-text-color`}>Tentative start time of 3:30pm. Details to be announced!</p>
+          <h4 className={`${h4Styles}`}>4pm - Ceremony</h4>
+          <Link target={`blank`} href={`http://www.castawayportland.com/`}><a className={`${linkStyles} text-text-color`}>Castaway Portland</a></Link>
+          <p className={`${paragraphStyles} text-text-color`}>1900 NW 18th Ave</p>
+          <p className={`${paragraphStyles} text-text-color`}>Portland, OR 97209</p>
+          <p className={`${paragraphStyles} text-text-color`}>Details to be announced!</p>
         </div>
       </div>
     )

@@ -73,7 +73,6 @@ export default function Home() {
       </div>
 
       <div className={`${pageLayoutStyles}`}>
-        {/* <RSVPForm /> */}
         <div className={`text-center`}>
           <FadeInImage
             src={`/images/peaches.webp`}

@@ -5,9 +5,10 @@
 import { React, useEffect } from 'react';
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import Link from 'next/link';
 
 // Import styles
-import { h2Styles, h5Styles, paragraphStyles } from "../utils/constants";
+import { h2Styles, h5Styles, buttonStyles, paragraphStyles } from "../utils/constants";
 
 export default function LeftRightText() {
   // Special hooks for animating when elements are in view
@@ -65,6 +66,13 @@ export default function LeftRightText() {
                 unfortunately cannot budge on this.
               </p>
             </div>
+            <Link href={`/rsvp`}>
+              <button
+                className={`${buttonStyles} block mt-4 mb-10`}
+              >
+                RSVP
+              </button>
+            </Link>
           </motion.div>
         </div>
       </div>

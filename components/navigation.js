@@ -65,6 +65,11 @@ export default function Navigation() {
                   Home
                 </Link>
               </li>
+              <li className={navigationLinkStyles}>
+                <Link href={`/rsvp`}>
+                  RSVP
+                </Link>
+              </li>
               <li className={mobileNavLinkStyles}>
                 <Link href={`/schedule`}>
                   Schedule
@@ -75,11 +80,6 @@ export default function Navigation() {
                   Location
                 </Link>
               </li>
-              {/* <li className={navigationLinkStyles}>
-                <Link href={`/`} href={`/#rsvp`}>
-                  RSVP
-                </Link>
-              </li> */}
             </ul>
           </Menu>
         </div>
@@ -92,6 +92,11 @@ export default function Navigation() {
               </Link>
             </li>
             <li className={navigationLinkStyles}>
+              <Link href={`/rsvp`}>
+                RSVP
+              </Link>
+            </li>
+            <li className={navigationLinkStyles}>
               <Link href={`/schedule`}>
                 Schedule
               </Link>
@@ -101,11 +106,6 @@ export default function Navigation() {
                 Location
               </Link>
             </li>
-            {/* <li className={navigationLinkStyles}>
-              <Link href={`/`} href={`/#rsvp`}>
-                RSVP
-              </Link>
-            </li> */}
           </ul>
         </div>
       </div>

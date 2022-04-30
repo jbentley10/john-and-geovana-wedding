@@ -8,7 +8,7 @@ import { BLOCKS, INLINES, MARKS } from "@contentful/rich-text-types";
 export const gradientBG = 'bg-gradient-to-r from-nude-1 to-nude-4';
 
 // Containers
-export const pageLayoutStyles = `px-10 py-2 md:p-10 md:py-8 md:px-32 h-screen ${gradientBG}`;
+export const pageLayoutStyles = `px-10 py-2 md:p-10 md:py-8 md:px-32 ${gradientBG}`;
 
 // Text
 // Regular

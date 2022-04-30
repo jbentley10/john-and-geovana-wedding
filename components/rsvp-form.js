@@ -19,7 +19,7 @@ export default function RSVPForm() {
       <h2 className={`${h2Styles}`}>RSVP</h2>
       <form onSubmit={handleSubmit}>
         {/* Yes/No Attendance */}
-        <label className={`${labelStyles} block`} for="attending">
+        <label className={`${labelStyles} block`} htmlFor="attending">
           Will you Attend?
         </label>
         <select

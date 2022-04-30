@@ -11,7 +11,10 @@ import Footer from "../components/footer";
 
 // Import styles
 import {
+  h1Styles,
+  h3Styles,
   pageLayoutStyles,
+  paragraphStyles,
 } from "../utils/constants";
 import RSVPForm from "../components/rsvp-form";
 
@@ -35,6 +38,7 @@ export default function RSVP() {
 
         <div className="pt-12 md:pt-24" id="location">
           <div className={`w-full pt-8 m-auto`}>
+            <h1 className={`${h1Styles} md:mb-12`}>RSVP</h1>
             <RSVPForm />
           </div>
         </div>

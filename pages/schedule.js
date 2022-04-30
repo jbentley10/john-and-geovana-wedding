@@ -35,10 +35,13 @@ export default function SchedulePage() {
         </Head>
 
         <Navigation />
+        <div className="pt-12 md:pt-24" id="location">
+          <div className={`w-full pt-8 m-auto`}>
+            <Schedule />
+          </div>
+        </div>
 
-        <Schedule />
-
-        <Footer showSeeYouThere={false}/>
+        <Footer showSeeYouThere={false} />
       </div>
     </>
   );

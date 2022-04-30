@@ -1,7 +1,7 @@
 import { useForm, ValidationError } from "@formspree/react";
 import {
   buttonStyles,
-  h2Styles,
+  h1Styles,
   paragraphStyles,
   inputStyles,
   labelStyles,
@@ -16,48 +16,52 @@ export default function RSVPForm() {
 
   return (
     <div id="rsvp">
-      <h2 className={`${h2Styles}`}>RSVP</h2>
       <form onSubmit={handleSubmit}>
         {/* Yes/No Attendance */}
-        <label className={`${labelStyles} block`} htmlFor="attending">
-          Will you Attend?
+        <label className={`${labelStyles} block -mb-2`} htmlFor="attending">
+          Will you Attend?&nbsp;<span className={`text-red`}>*</span>
         </label>
+        <p className={`${paragraphStyles} mb-2`}>Note: This applies to all attendees listed in the next section.</p>
+        
         <select
           className={`${inputStyles}`}
           name="attending"
           id="attending"
           required=""
         >
-          <option value="" selected="" disabled="">
-            Select
-          </option>
-          <option value="Yes">Yes</option>
-          <option value="No">No</option>
+          <option value="Yes">Vaccinated and attending</option>
+          <option value="No">Not attending</option>
         </select>
 
         {/* Attendee Name(s) */}
-        <label className={`${labelStyles} block`} htmlFor="name">
-          Attendee Name(s)
+        <label className={`${labelStyles} block -mb-2`} htmlFor="name">
+          Attendee Name(s)&nbsp;<span className={`text-red`}>*</span>
         </label>
+        <p className={`${paragraphStyles} mb-2`}>
+                Attendee names should only be those listed in the invitation you received.
+              </p>
         <input
           placeholder={`Separate each name with a comma (Ex: John Smith, Jane Doe)`}
           className={`${inputStyles}`}
           id="name"
           type="name"
           name="name"
+          required
         />
         <ValidationError prefix="Name" field="name" errors={state.errors} />
 
         {/* Email */}
-        <label className={`${labelStyles} block`} htmlFor="email">
-          Email Address
+        <label className={`${labelStyles} block -mb-2`} htmlFor="email">
+          Email Address&nbsp;<span className={`text-red`}>*</span>
         </label>
+        <p className={`${paragraphStyles} mb-2`}>We will only send you important information and a confirmation.</p>
         <input
           placeholder={`example@domain.com`}
           className={`${inputStyles}`}
           id="email"
           type="email"
           name="email"
+          required
         />
         <ValidationError prefix="Email" field="email" errors={state.errors} />
 
@@ -73,21 +77,6 @@ export default function RSVPForm() {
         />
         <ValidationError prefix="Diet" field="diet" errors={state.errors} />
 
-        {/* Message */}
-        <label className={`${labelStyles} block`} htmlFor="message">
-          Anything you'd like to add?
-        </label>
-        <textarea
-          placeholder={`Can't wait...`}
-          className={`${inputStyles}`}
-          id="message"
-          name="message"
-        />
-        <ValidationError
-          prefix="Message"
-          field="message"
-          errors={state.errors}
-        />
         <button
           className={`${buttonStyles} block mt-4 mb-10`}
           type="submit"

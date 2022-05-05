@@ -21,6 +21,8 @@ export const h4Styles = "font-john-mayer text-h4 text-text-color leading-13";
 export const h5Styles = "font-john-mayer text-h5 text-text-color leading-8";
 export const paragraphStyles =
   "font-jost text-paragraph text-text-color leading-normal";
+  export const bulletStyles =
+  "font-jost text-paragraph text-text-color leading-normal list-disc";
 export const labelStyles =
   "font-jost font-medium text-paragraph text-text-color leading-normal pb-2";
 // Links

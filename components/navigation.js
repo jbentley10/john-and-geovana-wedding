@@ -80,6 +80,11 @@ export default function Navigation() {
                   Location
                 </Link>
               </li>
+              <li className={mobileNavLinkStyles}>
+                <Link href={`/registry`}>
+                  Registry
+                </Link>
+              </li>
             </ul>
           </Menu>
         </div>
@@ -104,6 +109,11 @@ export default function Navigation() {
             <li className={navigationLinkStyles}>
               <Link href={`/location`}>
                 Location
+              </Link>
+            </li>
+            <li className={navigationLinkStyles}>
+              <Link href={`/registry`}>
+                Registry
               </Link>
             </li>
           </ul>

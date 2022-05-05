@@ -14,6 +14,8 @@ import {
   pageLayoutStyles,
   h1Styles,
   paragraphStyles,
+  bulletStyles,
+  linkStyles,
 } from "../utils/constants";
 
 export default function Registry() {
@@ -42,10 +44,12 @@ export default function Registry() {
               here is a list of stores where we would appreciate gift cards
               from!
             </p>
-            <ul>
-              <li className={`${paragraphStyles}`}>Store 1</li>
-              <li className={`${paragraphStyles}`}>Store 2</li>
-              <li className={`${paragraphStyles}`}>Store 3</li>
+            <ul className={`pl-10 pt-4`}>
+              <li className={`${bulletStyles}`}><a className={`${linkStyles}`} href="https://food52.com">Food 52</a></li>
+              <li className={`${bulletStyles}`}><a className={`${linkStyles}`} href="https://www.williams-sonoma.com/?cm_sp=tnav-_-williams-sonoma-_-tab">Williams Sonoma</a></li>
+              <li className={`${bulletStyles}`}><a className={`${linkStyles}`} href="https://www.cb2.com">CB2</a></li>
+              <li className={`${bulletStyles}`}><a className={`${linkStyles}`} href="https://www.target.com">Target</a></li>
+              <li className={`${bulletStyles}`}><a className={`${linkStyles}`} href="https://www.brooklinen.com/">Brooklinen</a></li>
             </ul>
           </div>
         </div>

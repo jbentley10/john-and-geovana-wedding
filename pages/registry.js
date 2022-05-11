@@ -8,6 +8,7 @@ import Head from "next/head";
 // Import components
 import Navigation from "../components/navigation";
 import Footer from "../components/footer";
+import FadeInImage from "../components/fade-in-image";
 
 // Import styles
 import {
@@ -39,18 +40,31 @@ export default function Registry() {
         <div className="pt-12 md:pt-24" id="registry">
           <div className={`w-full pt-8 m-auto`}>
             <h1 className={`${h1Styles} md:mb-12`}>Registry</h1>
-            <p className={`${paragraphStyles}`}>
-              In lieu of a traditional wedding registry through one company,
-              here is a list of stores where we would appreciate gift cards
-              from!
-            </p>
-            <ul className={`pl-10 pt-4`}>
-              <li className={`${bulletStyles}`}><a className={`${linkStyles}`} href="https://food52.com">Food 52</a></li>
-              <li className={`${bulletStyles}`}><a className={`${linkStyles}`} href="https://www.williams-sonoma.com/?cm_sp=tnav-_-williams-sonoma-_-tab">Williams Sonoma</a></li>
-              <li className={`${bulletStyles}`}><a className={`${linkStyles}`} href="https://www.cb2.com">CB2</a></li>
-              <li className={`${bulletStyles}`}><a className={`${linkStyles}`} href="https://www.target.com">Target</a></li>
-              <li className={`${bulletStyles}`}><a className={`${linkStyles}`} href="https://www.brooklinen.com/">Brooklinen</a></li>
-            </ul>
+            <div className={`flex space-between align-center`}>
+              <p className={`${paragraphStyles} md:w-3/6`}>
+                Please know that your presence at our wedding is present enough!
+                However, for friends and family who have been asking for gift
+                ideas, a contribution to our house fund would be warmly
+                appreciated. As much as we’d love linen and a new cooking set,
+                we simply don’t have the room in our tiny Washington, D.C.
+                apartment!
+                <br />
+                <br />
+                If you have any questions, please feel free to reach out to us at&nbsp; 
+                <a className={`${linkStyles}`} href="mailto:johnandgeovana@gmail.com">johnandgeovana@gmail.com</a>.
+              </p>
+              <div className={`md:w-2/6`}>
+                <FadeInImage
+                  src={`/images/geo-and-i.webp`}
+                  layout={`intrinsic`}
+                  height={600}
+                  width={500}
+                  alt={`John and Geovana looking out into the Portland skyline.`}
+                  loading={"lazy"}
+                  lazyBoundary={400}
+                />
+              </div>
+            </div>
           </div>
         </div>
 

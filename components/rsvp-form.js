@@ -29,7 +29,7 @@ export default function RSVPForm() {
           id="attending"
           required=""
         >
-          <option value="Yes">Vaccinated and attending</option>
+          <option value="Yes">Attending and vaccinated</option>
           <option value="No">Not attending</option>
         </select>
 

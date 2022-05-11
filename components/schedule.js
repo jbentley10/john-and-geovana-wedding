@@ -44,7 +44,7 @@ export default function Schedule() {
 
   const FridayContent = () => {
     return (
-      <div>
+      <div className={`mt-8`}>
         <div className={"inline"}>
           <h3
             className={`${h3Styles} w-full sm:w-7/12 md:w-full lg:w-9/12 xl:w-6/12 mb-2 border-b-4 border-purple`}

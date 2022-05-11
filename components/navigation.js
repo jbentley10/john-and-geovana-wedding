@@ -65,7 +65,7 @@ export default function Navigation() {
                   Home
                 </Link>
               </li>
-              <li className={navigationLinkStyles}>
+              <li className={mobileNavLinkStyles}>
                 <Link href={`/rsvp`}>
                   RSVP
                 </Link>

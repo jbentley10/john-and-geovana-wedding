@@ -33,7 +33,7 @@ export default function Schedule() {
           Portland, OR 97205
         </p>
         <br />
-        <p className={`${paragraphStyles} text-text-color`}>
+        <p className={`${paragraphStyles} text-text-color w-full md:w-1/2`}>
         The bride and groom will be at the 19th Hole from 6-8pm on Thursday evening if you’d 
         like to stop by and say hello. Snacks, yard games, and putt putt golf will be provided, 
         with food and beverages available for purchase.

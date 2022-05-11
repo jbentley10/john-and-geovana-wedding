@@ -34,8 +34,9 @@ export default function Schedule() {
         </p>
         <br />
         <p className={`${paragraphStyles} text-text-color`}>
-          Join us for some food and drinks together, right across the street
-          from Hotel deLuxe.
+        The bride and groom will be at the 19th Hole from 6-8pm on Thursday evening if you’d 
+        like to stop by and say hello. Snacks, yard games, and putt putt golf will be provided, 
+        with food and beverages available for purchase.
         </p>
       </div>
     );

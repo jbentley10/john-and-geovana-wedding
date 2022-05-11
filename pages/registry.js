@@ -40,8 +40,8 @@ export default function Registry() {
         <div className="pt-12 md:pt-24" id="registry">
           <div className={`w-full pt-8 m-auto`}>
             <h1 className={`${h1Styles} md:mb-12`}>Registry</h1>
-            <div className={`flex space-between align-center`}>
-              <p className={`${paragraphStyles} md:w-3/6`}>
+            <div className={`flex flex-col md:flex-row justify-between align-center`}>
+              <p className={`${paragraphStyles} w-full mb-12 md:mb-0 md:w-3/6 md:mr-4`}>
                 Please know that your presence at our wedding is present enough!
                 However, for friends and family who have been asking for gift
                 ideas, a contribution to our house fund would be warmly
@@ -53,7 +53,7 @@ export default function Registry() {
                 If you have any questions, please feel free to reach out to us at&nbsp; 
                 <a className={`${linkStyles}`} href="mailto:johnandgeovana@gmail.com">johnandgeovana@gmail.com</a>.
               </p>
-              <div className={`md:w-2/6`}>
+              <div className={`w-full md:w-2/6`}>
                 <FadeInImage
                   src={`/images/geo-and-i.webp`}
                   layout={`intrinsic`}

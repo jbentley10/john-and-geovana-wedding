@@ -25,7 +25,6 @@ export default function Home() {
     const onMouseMove = (e) => {
       circle.style.left = e.pageX / 2 + "px";
       circle.style.top = e.pageY / 2 + "px";
-      console.log("mouse position: " + e.pageX);
     };
     document.addEventListener("mousemove", onMouseMove);
   }, []);

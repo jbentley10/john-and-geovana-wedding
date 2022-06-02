@@ -62,8 +62,6 @@ export default function Registry() {
                     Go to Registry
                   </button>
                 </Link>
-                <br />
-                <br />
                 If you have any questions, please feel free to reach out to us at&nbsp; 
                 <a className={`${linkStyles}`} href="mailto:johnandgeovana@gmail.com">johnandgeovana@gmail.com</a>.
               </p>

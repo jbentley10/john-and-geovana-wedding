@@ -4,6 +4,7 @@
 
 // Import dependencies
 import Head from "next/head";
+import Link from "next/link";
 
 // Import components
 import Navigation from "../components/navigation";
@@ -15,7 +16,7 @@ import {
   pageLayoutStyles,
   h1Styles,
   paragraphStyles,
-  bulletStyles,
+  buttonStyles,
   linkStyles,
 } from "../utils/constants";
 
@@ -48,6 +49,19 @@ export default function Registry() {
                 appreciated. As much as we’d love linen and a new cooking set,
                 we simply don’t have the room in our tiny Washington, D.C.
                 apartment!
+                <br />
+                <br />
+                Should you choose to help us celebrate with a gift, a wishing well 
+                will be available on the day, or you can click the link below.
+                <br />
+                <br />
+                <Link target="blank" href="https://www.honeyfund.com/wedding/bentley-mendoza-07-29-2022">
+                  <button
+                    className={`${buttonStyles} block mt-4 mb-10`}
+                  >
+                    Go to Registry
+                  </button>
+                </Link>
                 <br />
                 <br />
                 If you have any questions, please feel free to reach out to us at&nbsp; 

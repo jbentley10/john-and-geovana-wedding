@@ -51,7 +51,11 @@ export default function Schedule() {
           >
             Friday, July 29, 2022
           </h3>
-          <h4 className={`${h4Styles}`}>4pm - Ceremony</h4>
+          <h4 className={`${h4Styles}`}>4-5pm - Guests Arrive at the Venue</h4>
+          <h4 className={`${h4Styles}`}>5pm - Ceremony</h4>
+          <h4 className={`${h4Styles}`}>5:30pm - Cocktail Hour</h4>
+          <h4 className={`${h4Styles}`}>6:45pm - Dinner</h4>
+          <h4 className={`${h4Styles}`}>8pm - Dancing</h4>
           <Link target={`blank`} href={`http://www.castawayportland.com/`}>
             <a className={`${linkStyles} text-text-color`}>Castaway Portland</a>
           </Link>
@@ -69,6 +73,30 @@ export default function Schedule() {
     );
   };
 
+  const SaturdayContent = () => {
+    return (
+      <div className={`mt-8`}>
+        <div className={"inline"}>
+          <h3
+            className={`${h3Styles} w-full sm:w-7/12 md:w-full lg:w-9/12 xl:w-6/12 mb-2 border-b-4 border-purple`}
+          >
+            Saturday, July 30, 2022
+          </h3>
+          <h4 className={`${h4Styles}`}>Evening - Karaoke and Drinks</h4>
+          <Link target={`blank`} href={`http://www.castawayportland.com/`}>
+            <a className={`${linkStyles} text-text-color`}>The Ambassador</a>
+          </Link>
+          <p className={`${paragraphStyles} text-text-color`}>
+            4744 NE Sandy Blvd
+          </p>
+          <p className={`${paragraphStyles} text-text-color`}>
+            Portland, OR 97213
+          </p>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div id="schedule">
       <h1 className={`${h1Styles} md:mb-12`}>Schedule</h1>
@@ -77,6 +105,7 @@ export default function Schedule() {
         <div className={`schedule-content`}>
           <ThursdayContent />
           <FridayContent />
+          <SaturdayContent />
         </div>
       </div>
 

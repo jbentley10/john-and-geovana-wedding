@@ -11,7 +11,6 @@ import LeftRightText from "../components/left-right-text";
 import BorderLeft from "../components/border-left";
 import ImageBlock from "../components/image-block";
 import Footer from "../components/footer";
-import RSVPForm from "../components/rsvp-form";
 
 // Import styles
 import { pageLayoutStyles } from "../utils/constants";

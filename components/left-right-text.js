@@ -66,13 +66,6 @@ export default function LeftRightText() {
                 unfortunately cannot budge on this.
               </p>
             </div>
-            <Link href={`/rsvp`}>
-              <button
-                className={`${buttonStyles} block mt-4 mb-10`}
-              >
-                RSVP
-              </button>
-            </Link>
           </motion.div>
         </div>
       </div>

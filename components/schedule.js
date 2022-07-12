@@ -24,7 +24,7 @@ export default function Schedule() {
         >
           Thursday, July 28, 2022
         </h3>
-        <h4 className={`${h4Styles}`}>5:30pm - Welcome Event</h4>
+        <h4 className={`${h4Styles}`}>6pm - Welcome Event</h4>
         <Link target={`blank`} href={`https://www.19thholepdx.com/`}>
           <a className={`${linkStyles} text-text-color`}>The 19th Hole</a>
         </Link>

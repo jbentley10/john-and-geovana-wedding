@@ -10,8 +10,7 @@ import {
   h3Styles,
   h4Styles,
   linkStyles,
-  paragraphStyles,
-  borderStyles,
+  paragraphStyles
 } from "../utils/constants";
 
 export default function Schedule() {
@@ -31,6 +30,10 @@ export default function Schedule() {
         <p className={`${paragraphStyles} text-text-color`}>795 SW 15th Ave</p>
         <p className={`${paragraphStyles} text-text-color`}>
           Portland, OR 97205
+        </p>
+        <br />
+        <p className={`${paragraphStyles} text-text-color`}>
+          <strong>Attire</strong>: Casual
         </p>
         <br />
         <p className={`${paragraphStyles} text-text-color w-full md:w-1/2`}>
@@ -65,6 +68,11 @@ export default function Schedule() {
           <p className={`${paragraphStyles} text-text-color`}>
             Portland, OR 97209
           </p>
+          <br />
+          <p className={`${paragraphStyles} text-text-color`}>
+            <strong>Attire</strong>: Festival cocktail
+          </p>
+          <br />
           <p className={`${paragraphStyles} text-text-color`}>
             Dinner and dancing to follow!
           </p>
@@ -91,6 +99,10 @@ export default function Schedule() {
           </p>
           <p className={`${paragraphStyles} text-text-color`}>
             Portland, OR 97213
+          </p>
+          <br />
+          <p className={`${paragraphStyles} text-text-color`}>
+            <strong>Attire</strong>: Casual
           </p>
         </div>
       </div>

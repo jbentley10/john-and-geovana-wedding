@@ -6,7 +6,6 @@
 import Head from "next/head";
 
 // Import components
-import Hero from "../components/hero";
 import Navigation from "../components/navigation";
 import Schedule from "../components/schedule";
 import Footer from "../components/footer";
@@ -14,8 +13,6 @@ import Footer from "../components/footer";
 // Import styles
 import {
   pageLayoutStyles,
-  h1Styles,
-  paragraphStyles,
 } from "../utils/constants";
 
 export default function SchedulePage() {

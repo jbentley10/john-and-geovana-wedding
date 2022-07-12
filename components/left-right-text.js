@@ -57,7 +57,7 @@ export default function LeftRightText() {
                 those 21 and over. We thank you for your understanding.
               </p>
               <p className={`${paragraphStyles}`}>
-                <strong>Dress Code</strong>: <a className={linkStyles}href="https://www.brides.com/cocktail-attire-wedding-4844364" target="blank">Festive cocktail attire</a>.
+                <strong>Attire</strong>: <a className={linkStyles}href="https://www.brides.com/cocktail-attire-wedding-4844364" target="blank">Festive cocktail</a>
               </p>
               <br/>
               <p className={`${paragraphStyles}`}>

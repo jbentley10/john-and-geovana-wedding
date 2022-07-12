@@ -24,6 +24,12 @@ export default function Schedule() {
           Thursday, July 28, 2022
         </h3>
         <h4 className={`${h4Styles}`}>6pm - Welcome Event</h4>
+        <p className={`${paragraphStyles} text-text-color w-full md:w-1/2`}>
+        The bride and groom will be at the 19th Hole from 6-8pm on Thursday evening if you’d 
+        like to stop by and say hello. Snacks, yard games, and putt putt golf will be provided, 
+        with food and beverages available for purchase.
+        </p>
+        <br />
         <Link target={`blank`} href={`https://www.19thholepdx.com/`}>
           <a className={`${linkStyles} text-text-color`}>The 19th Hole</a>
         </Link>
@@ -34,12 +40,6 @@ export default function Schedule() {
         <br />
         <p className={`${paragraphStyles} text-text-color`}>
           <strong>Attire</strong>: Casual
-        </p>
-        <br />
-        <p className={`${paragraphStyles} text-text-color w-full md:w-1/2`}>
-        The bride and groom will be at the 19th Hole from 6-8pm on Thursday evening if you’d 
-        like to stop by and say hello. Snacks, yard games, and putt putt golf will be provided, 
-        with food and beverages available for purchase.
         </p>
       </div>
     );
@@ -54,6 +54,7 @@ export default function Schedule() {
           >
             Friday, July 29, 2022
           </h3>
+          <h4 className={`${h4Styles}`}>Our Wedding Day</h4>          
           <h4 className={`${h4Styles}`}>4-5pm - Guests Arrive at the Venue</h4>
           <h4 className={`${h4Styles}`}>5pm - Ceremony</h4>
           <h4 className={`${h4Styles}`}>5:30pm - Cocktail Hour</h4>
@@ -71,10 +72,6 @@ export default function Schedule() {
           <br />
           <p className={`${paragraphStyles} text-text-color`}>
             <strong>Attire</strong>: Festival cocktail
-          </p>
-          <br />
-          <p className={`${paragraphStyles} text-text-color`}>
-            Dinner and dancing to follow!
           </p>
         </div>
       </div>
@@ -102,7 +99,7 @@ export default function Schedule() {
           </p>
           <br />
           <p className={`${paragraphStyles} text-text-color`}>
-            <strong>Attire</strong>: Casual
+            <strong>Attire</strong>: Come as you are
           </p>
         </div>
       </div>

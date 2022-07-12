@@ -8,7 +8,7 @@ import { useInView } from "react-intersection-observer";
 import Link from 'next/link';
 
 // Import styles
-import { h2Styles, h5Styles, buttonStyles, paragraphStyles } from "../utils/constants";
+import { h2Styles, h5Styles, buttonStyles, paragraphStyles, linkStyles } from "../utils/constants";
 
 export default function LeftRightText() {
   // Special hooks for animating when elements are in view
@@ -42,9 +42,6 @@ export default function LeftRightText() {
             <h2 className={`${h2Styles} pb-12`}>
               We hope you'll be there to celebrate with us in Portland, Oregon!
             </h2>
-            <h2 className={`${h2Styles} pb-12`}>
-              Formal invitations to come this summer.
-            </h2>
           </motion.div>
           <motion.div
             ref={ref}
@@ -60,19 +57,16 @@ export default function LeftRightText() {
                 those 21 and over. We thank you for your understanding.
               </p>
               <p className={`${paragraphStyles}`}>
-                Health & Safety: We are requiring all guests and vendors who are
+                <strong>Dress Code</strong>: <a className={linkStyles}href="https://www.brides.com/cocktail-attire-wedding-4844364" target="blank">Festive cocktail attire</a>.
+              </p>
+              <br/>
+              <p className={`${paragraphStyles}`}>
+                <strong>Health & Safety</strong>: We are requiring all guests and vendors who are
                 attending our wedding to be fully vaccinated. If vaccination is not
                 possible, while we’d love for you to join in on the festivities, we
                 unfortunately cannot budge on this.
               </p>
             </div>
-            <Link href={`/rsvp`}>
-              <button
-                className={`${buttonStyles} block mt-4 mb-10`}
-              >
-                RSVP
-              </button>
-            </Link>
           </motion.div>
         </div>
       </div>
